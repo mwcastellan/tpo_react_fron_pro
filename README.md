@@ -2,7 +2,7 @@
 
 - TRABAJO PRACTICO: tpo-react-fron-pro - https://tpo-react-fron.vercel.app
 
-- GITHUB: https://github.com/mwcastellan/tpo_react_fron-pro
+- GITHUB: https://github.com/mwcastellan/tpo_react_fron_pro
 
 
 1. Descarga Node.js desde su sitio oficial e instálalo.

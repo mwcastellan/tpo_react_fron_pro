@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import ProductoAdm from "./ProductoAdm";
-import { useState } from "react";
+import { CarritoContext } from "../context/CarritoContext";
 
 /* Lista de Productos Administrar */
-const ProductosListaAdm = ({ productos }) => {
+const ProductosListaAdm = () => {
+  const { productos } = useContext(CarritoContext);
   const [filtro, setFiltro] = useState("");
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(filtro.toLowerCase())

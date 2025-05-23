@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { CarritoContext } from "../context/CarritoContext";
 
 /* Producto por ID */
-const ProductoID = ({ productos }) => {
+const ProductoID = () => {
+  const { productos } = useContext(CarritoContext);
   const navigate = useNavigate();
   const { id } = useParams();
   const producto = productos.find((producto) => producto.id == id);

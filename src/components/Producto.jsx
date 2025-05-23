@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 
 /* Producto */
-const Producto = ({ producto }) => {
+const Producto = ({producto}) => {
   const { handleAddToCarrito } = useContext(CarritoContext);
   const [cantidad, setCantidad] = useState(1);
   const increase = () =>

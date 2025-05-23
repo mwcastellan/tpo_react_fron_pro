@@ -6,8 +6,8 @@ import ProductosListaAdm from "../components/ProductosListaAdm";
 import { CarritoContext } from "../context/CarritoContext";
 
 /* Administrar */
-const Administrar = ({ productos }) => {
-   const { isAutorizado, setIsAutorizado } = useContext(CarritoContext);
+const Administrar = () => {
+   const { isAutorizado, setIsAutorizado} = useContext(CarritoContext);
   const ira = useNavigate();
   return (
     <>
@@ -27,7 +27,7 @@ const Administrar = ({ productos }) => {
       </section>
       <section>
         <button className="btn btn-secondary">Alta de Productos</button>
-        <ProductosListaAdm productos={productos} />
+        <ProductosListaAdm />
       </section>
       <Footer />
     </>

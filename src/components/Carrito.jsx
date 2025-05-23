@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { CarritoContext } from "../context/CarritoContext";
 
 /* Carrito de Compras */
-const Carrito = ({ carrito, isOpen, onClose, borrarProducto }) => {
+const Carrito = () => {
+  const { carrito, isCarritoOpen, setCarritoOpen, handleDeleteFromCarrito } =
+    useContext(CarritoContext);
+
   return (
-    <div className={`cart-drawer ${isOpen ? "open" : ""}`}>
+    <div className={`cart-drawer ${isCarritoOpen ? "open" : ""}`}>
       <div className="cart cart-header bg-primary">
         <h2>Carrito de Compras</h2>
 
         <button
-          onClick={onClose}
+          onClick={() => setCarritoOpen(false)}
           type="button"
           className="btn btn-secondary"
           data-bs-dismiss="modal"
@@ -43,7 +47,7 @@ const Carrito = ({ carrito, isOpen, onClose, borrarProducto }) => {
                         <span className="badge bg-secondary rounded-pill">
                           Total ${item.cantidad * item.precio}
                         </span>
-                        <button onClick={() => borrarProducto(item)}>
+                        <button onClick={() => handleDeleteFromCarrito(item)}>
                           <i className="fa-solid fa-trash"></i>
                         </button>
                       </li>

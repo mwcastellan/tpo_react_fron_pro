@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import Producto from "./Producto";
-import { useState } from "react";
+import { CarritoContext } from "../context/CarritoContext";
 
 /* Lista de Productos */
-const ProductosLista = ({ productos, agregarCarrito }) => {
+const ProductosLista = () => {
+  const { productos } = useContext(CarritoContext);
   const [filtro, setFiltro] = useState("");
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(filtro.toLowerCase())
@@ -16,7 +17,7 @@ const ProductosLista = ({ productos, agregarCarrito }) => {
           className="accordion-button collapsed"
           onClick={() => setMostrarInput(!mostrarInput)}
         >
-          {mostrarInput ? "Filtrar por Nombre ▲" :  "Filtrar por Nombre ▼"}
+          {mostrarInput ? "Filtrar por Nombre ▲" : "Filtrar por Nombre ▼"}
         </button>
         {mostrarInput && (
           <section>
@@ -32,11 +33,7 @@ const ProductosLista = ({ productos, agregarCarrito }) => {
 
       <section className="Productos list-group-item list-group-item-action flex-column align-items-start">
         {productosFiltrados.map((producto) => (
-          <Producto
-            key={producto.id}
-            producto={producto}
-            addToCart={agregarCarrito}
-          />
+          <Producto key={producto.id} producto={producto} />
         ))}
       </section>
 

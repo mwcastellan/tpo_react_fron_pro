@@ -3,10 +3,10 @@ import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
 
 /* Contacto */
-const Contacto = ({ carrito, borrarProducto }) => {
+const Contacto = () => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} carrito={carrito} />
+      <Header />
       <form className="" action="/" method="POST">
         <fieldset className="ContactoFieldset">
           <legend>Turnos</legend>

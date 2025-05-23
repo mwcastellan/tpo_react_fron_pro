@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import HeaderAdm from "../components/estaticos/HeaderAdm";
 import { useNavigate } from "react-router-dom";
+import { CarritoContext } from "../context/CarritoContext";
 
 /* Login */
-const Login = ({ isAutorizado, setIsAutorizado }) => {
+const Login = () => {
+  const { isAutorizado, setIsAutorizado } = useContext(CarritoContext);
   const ira = useNavigate();
   const autorizar = () => {
     setIsAutorizado(!isAutorizado);

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import HeaderAdm from "../components/estaticos/HeaderAdm";
 import Footer from "../components/estaticos/Footer";
 import ProductosListaAdm from "../components/ProductosListaAdm";
+import { CarritoContext } from "../context/CarritoContext";
 
 /* Administrar */
-const Administrar = ({ isAutorizado, setIsAutorizado, productos }) => {
+const Administrar = ({ productos }) => {
+   const { isAutorizado, setIsAutorizado } = useContext(CarritoContext);
   const ira = useNavigate();
   return (
     <>

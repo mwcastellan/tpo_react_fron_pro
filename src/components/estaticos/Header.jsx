@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Carrito from "../Carrito";
 import Logo from "../../assets/react.svg";
+import { CarritoContext } from "../../context/CarritoContext";
 
 /* Header */
-const Header = ({ carrito, borrarProducto }) => {
-  const [isCartOpen, setCartOpen] = useState(false);
+const Header = () => {
+  const { setCarritoOpen } = useContext(CarritoContext);
 
   return (
     <header className="Header bg-primary">
@@ -47,14 +48,9 @@ const Header = ({ carrito, borrarProducto }) => {
           <li className="link nav-item">
             <button
               className="btnCart fa-solid fa-cart-shopping fa-2x"
-              onClick={() => setCartOpen(true)}
+              onClick={() => setCarritoOpen(true)}
             ></button>
-            <Carrito
-              carrito={carrito}
-              isOpen={isCartOpen}
-              onClose={() => setCartOpen(false)}
-              borrarProducto={borrarProducto}
-            />
+            <Carrito />
           </li>
         </ul>
       </nav>

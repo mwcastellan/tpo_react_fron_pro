@@ -3,11 +3,11 @@ import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
 import carrusel1 from "../assets/carrusel1.png";
 
-/* Inicio */ 
-const Inicio = ({ carrito, borrarProducto }) => {
+/* Inicio */
+const Inicio = () => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} carrito={carrito} />
+      <Header />
       <div className="Inicio-container-grid">
         <main className="Inicio-main">
           <div className="imagenCarrusel">

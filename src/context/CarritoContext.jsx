@@ -15,6 +15,8 @@ export const CarritoProvider = ({ children }) => {
   const [isCarritoOpen, setCarritoOpen] = useState(false);
   /* Autorizado a ingresar a Administrar */
   const [isAutorizado, setIsAutorizado] = useState(false);
+  /* Usuario Autenticado */
+  const [usuario, setUsuario] = useState("");
 
   useEffect(() => {
     fetch(
@@ -87,6 +89,8 @@ export const CarritoProvider = ({ children }) => {
         setIsAutorizado,
         isCarritoOpen,
         setCarritoOpen,
+        usuario,
+        setUsuario,
       }}
     >
       {children}

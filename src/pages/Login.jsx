@@ -15,7 +15,8 @@ const Login = () => {
   return (
     <>
       <HeaderAdm />
-      <article className="card mb-3 list-group-item list-group-item-action flex-column align-items-start">
+      <section className="container Productos list-group-item list-group-item-action flex-column align-items-start ">
+      <article className="Producto card mb-2  list-group-item-action flex-column align-items-start ">
         <h5 className="card-header">Login</h5>
         <div className="card-body">
           <h6 className="card-title">Usuario</h6>
@@ -30,6 +31,7 @@ const Login = () => {
           </button>
         </div>
       </article>
+      </section>
     </>
   );
 };

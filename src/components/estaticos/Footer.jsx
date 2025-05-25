@@ -33,7 +33,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://github.com/mwcastellan/tpo_react_fron"
+          href="https://github.com/mwcastellan/tpo_react_fron_pro"
           title="Mi desarrollo en Github"
           target="_blank"
         >

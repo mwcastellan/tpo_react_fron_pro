@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 
 /* Producto */
-const Producto = ({producto}) => {
+const Producto = ({ producto }) => {
   const { handleAddToCarrito } = useContext(CarritoContext);
   const [cantidad, setCantidad] = useState(1);
   const increase = () =>
@@ -11,7 +11,7 @@ const Producto = ({producto}) => {
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
-    <article className="Producto card mb-3 list-group-item list-group-item-action flex-column align-items-start">
+    <article className="Producto card mb-2  list-group-item-action flex-column align-items-start ">
       <h5 className="card-header">{producto.nombre}</h5>
       <div className="card-body">
         <h6 className="card-title">Articulo: {producto.id}</h6>
@@ -30,7 +30,7 @@ const Producto = ({producto}) => {
         }}
       >
         <button
-          className="btn btn-primary px-2 py-0 rounded"
+          className="btn btn-outline-warning px-2 py-0 rounded"
           onClick={decrease}
           style={{
             border: "none",
@@ -41,9 +41,9 @@ const Producto = ({producto}) => {
         >
           -
         </button>
-        <span>{cantidad}</span>
+        <h6>{cantidad}</h6>
         <button
-          className="btn btn-primary px-2 py-0 rounded"
+          className="btn btn-outline-warning px-2 py-0 rounded"
           onClick={increase}
           style={{
             border: "none",
@@ -56,13 +56,26 @@ const Producto = ({producto}) => {
         </button>
       </div>
 
-      <button
-        className="btn btn-secondary"
-        onClick={() => handleAddToCarrito({ ...producto, cantidad: cantidad })}
-      >
-        Agregar
-      </button>
-      <Link to={`/productos/${producto.id}`}> Más detalle</Link>
+      <ul className="navbar-nav me-auto Nav-Ul">
+        <li>
+          <button
+            className="btn btn-secondary"
+            onClick={() =>
+              handleAddToCarrito({ ...producto, cantidad: cantidad })
+            }
+          >
+            Agregar
+          </button>
+        </li>
+        <li>
+          <Link
+            className="btn btn-outline-info"
+            to={`/productos/${producto.id}`}
+          >
+            Más información
+          </Link>
+        </li>
+      </ul>
     </article>
   );
 };

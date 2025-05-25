@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /* ProductoAdm */
 const ProductoAdm = ({ producto }) => {
   return (
-    <article className="Producto card mb-3 list-group-item list-group-item-action flex-column align-items-start">
+   <article className="Producto card mb-2  list-group-item-action flex-column align-items-start ">
       <h5 className="card-header">{producto.nombre}</h5>
       <div className="card-body">
         <h6 className="card-title">Articulo: {producto.id}</h6>

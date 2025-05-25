@@ -13,6 +13,7 @@ const ProductosListaAdm = () => {
   return (
     <>
       <section className="ProductList_Filtro">
+        <h4>Administrar los productos:</h4>
         <button
           className="accordion-button collapsed"
           onClick={() => setMostrarInput(!mostrarInput)}

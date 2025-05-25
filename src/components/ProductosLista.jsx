@@ -13,6 +13,7 @@ const ProductosLista = () => {
   return (
     <>
       <section className="ProductList_Filtro">
+        <h4>Galería de nuestros productos:</h4>
         <button
           className="accordion-button collapsed"
           onClick={() => setMostrarInput(!mostrarInput)}
@@ -31,7 +32,7 @@ const ProductosLista = () => {
         )}
       </section>
 
-      <section className="Productos list-group-item list-group-item-action flex-column align-items-start">
+      <section className="container Productos list-group-item list-group-item-action flex-column align-items-start ">
         {productosFiltrados.map((producto) => (
           <Producto key={producto.id} producto={producto} />
         ))}

@@ -8,15 +8,15 @@ const Inicio = () => {
   return (
     <>
       <Header />
-      <div className="Inicio-container-grid">
+      <div className="container Inicio-container-grid">
         <main className="Inicio-main">
           <div className="imagenCarrusel">
             <img className="img-carrusel1" src={carrusel1} />
           </div>
         </main>
-        <aside className="Inicio-aside">
+        <aside className="Inicio-aside alert alert-dismissible alert-primary">
           <article>
-            <h3>Nosotros</h3>
+            <h4>Nosotros</h4>
             <p>
               Más que una clínica veterinaria, Veterinaria Clase 25022 es una
               familia dedicada a brindar atención integral a sus mascotas. Con
@@ -24,13 +24,13 @@ const Inicio = () => {
               equipo se compromete a ofrecer servicios veterinarios de
               vanguardia en un ambiente cálido y acogedor.
             </p>
-            <h3>Nuestra Misión</h3>
+            <h4>Nuestra Misión</h4>
             <p>
               Nuestra misión es brindar atención veterinaria de excelencia a las
               mascotas de nuestra comunidad, promoviendo su salud y bienestar a
               través de servicios preventivos, curativos y de educación.
             </p>
-            <h3>Nuestra Visión</h3>
+            <h4>Nuestra Visión</h4>
             <p>
               Aspiramos a ser la clínica veterinaria líder en nuestra comunidad,
               reconocida por la excelencia en nuestros servicios, el compromiso
@@ -40,9 +40,9 @@ const Inicio = () => {
           </article>
         </aside>
 
-        <div className="Inicio-ubicacion">
+        <div className="Inicio-ubicacion  alert alert-dismissible alert-primary">
           <div className="Inicio-parrafo">
-            <h3>Ubicación</h3>
+            <h4>Ubicación</h4>
             <p>
               <i className="fa-solid fa-location-dot"></i>
               Nos encontramos en el hermoso barrio de Almagro de la Ciudad

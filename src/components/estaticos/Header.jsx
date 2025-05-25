@@ -11,48 +11,49 @@ const Header = () => {
   return (
     <header className="Header bg-primary">
       <h2>Veterinaria Pro - Curso React Frontend - Clase 25022</h2>
-      <nav className="Nav navbar-expand-lg bg-primary">
-        <img src={Logo} />
-        <ul className="navbar-nav me-auto Nav-Ul">
-          <li>
-            <Link to="/" className="link nav-item h6 btn btn-success">
-              Inicio
-            </Link>
-          </li>
-          <li>
-            <Link to="/productos" className="link nav-item h6 btn btn-success">
-              Galeria de Productos
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/adoptame"
-              className="link nav-item h6 btn btn btn-success"
-            >
-              Adoptame
-            </Link>
-          </li>
-          <li>
-            <Link to="/contacto" className="link nav-item h6 btn btn-success">
-              Contacto
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/administrar"
-              className="link nav-item h6 btn btn-success"
-            >
-              Administrar
-            </Link>
-          </li>
-          <li className="link nav-item">
-            <button
-              className="btnCart fa-solid fa-cart-shopping fa-2x"
-              onClick={() => setCarritoOpen(true)}
-            ></button>
-            <Carrito />
-          </li>
-        </ul>
+
+      <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div className="container-fluid">
+          <div className="navbar-collapse" id="navbarColor01">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <img src={Logo} />
+              </li>
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  Inicio
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/productos" className="nav-link">
+                  Galeria de Productos
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/adoptame" className="nav-link">
+                  Adoptame
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/contacto" className="nav-link">
+                  Contacto
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/administrar" className="nav-link">
+                  Administrar
+                </Link>
+              </li>
+              <li className="nav-item nav-link">
+                <button
+                  className="btnCart fa-solid fa-cart-shopping fa-2x"
+                  onClick={() => setCarritoOpen(true)}
+                ></button>
+                <Carrito />
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
   );

@@ -36,7 +36,7 @@ const Login = () => {
       } else {
         if (foundUsuario.role === "admin") {
           setIsAutorizado(true);
-          setUsuario(email);
+          setUsuario(foundUsuario.email);
           navigate("/administrar");
         } else {
           setIsAutorizado(false);
@@ -57,8 +57,17 @@ const Login = () => {
   return (
     <>
       <HeaderAdm />
+      <section className="ProductList_Filtro">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h4>Administrar Productos</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="container">
-        <h4>Administrar Productos</h4>
         <section>
           <form onSubmit={handleEnviar}>
             <fieldset className="ContactoFieldset">

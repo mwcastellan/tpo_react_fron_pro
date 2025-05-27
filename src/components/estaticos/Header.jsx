@@ -16,7 +16,7 @@ const Header = () => {
         <div className="container-fluid">
           <div className="navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <li className="nav-item nav-link">
                 <img src={Logo} />
               </li>
               <li className="nav-item">
@@ -46,7 +46,7 @@ const Header = () => {
               </li>
               <li className="nav-item nav-link">
                 <button
-                  className="btnCart fa-solid fa-cart-shopping fa-2x"
+                  className="btnCart fa-solid fa-cart-shopping fa-1x"
                   onClick={() => setCarritoOpen(true)}
                 ></button>
                 <Carrito />

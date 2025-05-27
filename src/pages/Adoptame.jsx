@@ -10,8 +10,17 @@ const Adoptame = () => {
   return (
     <>
       <Header />
+      <section className="ProductList_Filtro">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h4>Adoptame:</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="container">
-        <h4>Adoptame:</h4>
         <section>
           <h5>
             Qué tener en cuenta antes de adoptar una <strong>mascota:</strong>
@@ -83,13 +92,13 @@ const Adoptame = () => {
           </article>
         </section>
 
-        <section >
+        <section>
           <img src={cachorro_1} width="25%" height="25%" />
           <img src={perro_adulto} width="25%" height="25%" />
           <img src={perro_joven} width="25%" height="25%" />
         </section>
 
-        <section >
+        <section>
           <h5>
             Requisitos de <strong>adopción:</strong>
           </h5>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /* ProductoAdm */
 const ProductoAdm = ({ producto }) => {
   return (
-   <article className="Producto card mb-2  list-group-item-action flex-column align-items-start ">
+    <article className="container Producto card mb-2  list-group-item-action flex-column align-items-start ">
       <h5 className="card-header">{producto.nombre}</h5>
       <div className="card-body">
         <h6 className="card-title">Articulo: {producto.id}</h6>
@@ -16,12 +16,15 @@ const ProductoAdm = ({ producto }) => {
         <h6 className="card-title">Descripción 2: {producto.descripcion2}</h6>
         <img src={producto.imagen} width="50%" height="50%" />
       </div>
-      <div className="card-footer text-muted">
+
+      <div className="">
         <button className="btn btn-secondary">Modificar</button>
         <button className="btn btn-secondary">Eliminar</button>
       </div>
 
-      <Link to={`/productos/${producto.id}`}> Más detalle</Link>
+      <Link className="btn btn-outline-info" to={`/productos/${producto.id}`}>
+        Más información
+      </Link>
     </article>
   );
 };

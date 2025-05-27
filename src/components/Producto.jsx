@@ -11,7 +11,7 @@ const Producto = ({ producto }) => {
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
-    <article className="Producto card mb-2  list-group-item-action flex-column align-items-start ">
+    <article className="container Producto card mb-2  list-group-item-action flex-column align-items-start ">
       <h5 className="card-header">{producto.nombre}</h5>
       <div className="card-body">
         <h6 className="card-title">Articulo: {producto.id}</h6>

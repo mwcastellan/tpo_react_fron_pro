@@ -13,23 +13,31 @@ const ProductosLista = () => {
   return (
     <>
       <section className="ProductList_Filtro">
-        <h4>Galería de nuestros productos:</h4>
-        <button
-          className="accordion-button collapsed"
-          onClick={() => setMostrarInput(!mostrarInput)}
-        >
-          {mostrarInput ? "Filtrar por Nombre ▲" : "Filtrar por Nombre ▼"}
-        </button>
-        {mostrarInput && (
-          <section>
-            <input
-              type="text"
-              className="form-control"
-              value={filtro}
-              onChange={(e) => setFiltro(e.target.value)}
-            />
-          </section>
-        )}
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h4>Galería de nuestros productos:</h4>
+            </div>
+            <div className="col">
+              <button
+                className="accordion-button collapsed"
+                onClick={() => setMostrarInput(!mostrarInput)}
+              >
+                {mostrarInput ? "Filtrar por Nombre ▲" : "Filtrar por Nombre ▼"}
+              </button>
+              {mostrarInput && (
+                <section>
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={filtro}
+                    onChange={(e) => setFiltro(e.target.value)}
+                  />
+                </section>
+              )}
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="container Productos list-group-item list-group-item-action flex-column align-items-start ">

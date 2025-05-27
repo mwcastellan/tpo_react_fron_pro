@@ -7,8 +7,17 @@ const Contacto = () => {
   return (
     <>
       <Header />
+      <section className="ProductList_Filtro">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h4>Solicite Turno o contáctenos:</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="container">
-        <h4>Solicite Turno o contáctenos:</h4>
         <section>
           <form action="/" method="POST">
             <fieldset className="ContactoFieldset">

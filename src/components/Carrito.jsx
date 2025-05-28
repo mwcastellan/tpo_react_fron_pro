@@ -7,7 +7,7 @@ const Carrito = () => {
     useContext(CarritoContext);
 
   return (
-    <div className={`cart-drawer ${isCarritoOpen ? "open" : ""}`}>
+    <div className={`bg-primary cart-drawer ${isCarritoOpen ? "open" : ""}`}>
       <div className="cart cart-header bg-primary">
         <h2>Carrito de Compras</h2>
 

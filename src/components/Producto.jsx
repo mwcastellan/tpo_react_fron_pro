@@ -11,17 +11,21 @@ const Producto = ({ producto }) => {
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
-    <article className="card mb-2 list-group-item-action flex-column align-items-start">
+    <article
+      className="card border-secondary mb-3"
+      style={{ maxWidth: "20rem" }}
+    >
       <h5 className="card-header">{producto.nombre}</h5>
       <div className="card-body">
         <h6 className="card-title">Articulo: {producto.id}</h6>
         <h6 className="card-title">Categoria: {producto.categoria}</h6>
         <h6 className="card-title">Precio: ${producto.precio}</h6>
         <h6 className="card-title">Disponible: {producto.disponible}</h6>
-        <img src={producto.imagen} width="50%" height="50%" />
-
+        {producto.imagen && (
+          <img src={producto.imagen} width="35%" height="35%" />
+        )}
         <div
-          className="card-title text-muted"
+          className="card-title"
           style={{
             display: "flex",
             alignItems: "center",
@@ -55,27 +59,23 @@ const Producto = ({ producto }) => {
             +
           </button>
         </div>
+        <div className="card-title">
+          <button
+            className="btn btn-secondary"
+            onClick={() =>
+              handleAddToCarrito({ ...producto, cantidad: cantidad })
+            }
+          >
+            Agregar
+          </button>
 
-        <ul className="navbar-nav me-auto Nav-Ul">
-          <li>
-            <button
-              className="btn btn-secondary"
-              onClick={() =>
-                handleAddToCarrito({ ...producto, cantidad: cantidad })
-              }
-            >
-              Agregar
-            </button>
-          </li>
-          <li>
-            <Link
-              className="btn btn-outline-info"
-              to={`/productos/${producto.id}`}
-            >
-              Más información
-            </Link>
-          </li>
-        </ul>
+          <Link
+            className="btn btn-outline-info"
+            to={`/productos/${producto.id}`}
+          >
+            Más información
+          </Link>
+        </div>
       </div>
     </article>
   );

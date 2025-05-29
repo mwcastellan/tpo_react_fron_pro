@@ -40,36 +40,40 @@ const ProductosLista = () => {
         </div>
       </section>
 
-      <section className="container Productos list-group-item list-group-item-action flex-column align-items-start ">
-        {productosFiltrados.map((producto) => (
-          <Producto key={producto.id} producto={producto} />
-        ))}
+      <section className="list-group container">
+        <div className="row">
+          {productosFiltrados.map((producto) => (
+            <Producto key={producto.id} producto={producto} />
+          ))}
+        </div>
       </section>
 
-      <section className="Productos_Notas_containerGrid">
-        <article className="Productos_Nota_containerGridItem">
-          <i className="fa-solid fa-truck fa-2x"></i>
-          <h5>Envío gratis</h5>
-          <p>En compras mayores a $22000</p>
-        </article>
+      <section className="list-group container">
+        <div class="row">
+          <article className="card col">
+            <i className="fa-solid fa-truck fa-2x"></i>
+            <h5>Envío gratis</h5>
+            <p>En compras mayores a $22000</p>
+          </article>
 
-        <article className="Productos_Nota_containerGridItem">
-          <i className="fa-solid fa-cart-shopping fa-2x"></i>
-          <h5>Beneficios</h5>
-          <p>En todas tus compras</p>
-        </article>
+          <article className="card col">
+            <i className="fa-solid fa-cart-shopping fa-2x"></i>
+            <h5>Beneficios</h5>
+            <p>En todas tus compras</p>
+          </article>
 
-        <article className="Productos_Nota_containerGridItem">
-          <i className="fa-regular fa-credit-card fa-2x"></i>
-          <h5>Todos los medios de pago</h5>
-          <p>Tarjetas de crédito, débito o efectivo</p>
-        </article>
+          <article className="card col">
+            <i className="fa-regular fa-credit-card fa-2x"></i>
+            <h5>Todos los medios de pago</h5>
+            <p>Tarjetas de crédito, débito o efectivo</p>
+          </article>
 
-        <article className="Productos_Nota_containerGridItem">
-          <i className="fa-solid fa-location-dot fa-2x"></i>
-          <h5>Retiro en tienda</h5>
-          <p>Beneficios y regalos exclusivos</p>
-        </article>
+          <article className="card col">
+            <i className="fa-solid fa-location-dot fa-2x"></i>
+            <h5>Retiro en tienda</h5>
+            <p>Beneficios y regalos exclusivos</p>
+          </article>
+        </div>
       </section>
     </>
   );

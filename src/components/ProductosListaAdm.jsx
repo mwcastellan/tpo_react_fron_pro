@@ -75,10 +75,12 @@ const ProductosListaAdm = () => {
         </div>
       </section>
 
-      <section className="container Productos list-group-item list-group-item-action flex-column align-items-start ">
-        {productosFiltrados.map((producto) => (
-          <ProductoAdm key={producto.id} producto={producto} />
-        ))}
+      <section className="list-group container">
+        <div className="row">
+          {productosFiltrados.map((producto) => (
+            <ProductoAdm key={producto.id} producto={producto} />
+          ))}
+        </div>
       </section>
     </>
   );

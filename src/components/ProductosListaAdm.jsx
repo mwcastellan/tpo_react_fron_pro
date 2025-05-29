@@ -50,7 +50,7 @@ const ProductosListaAdm = () => {
               >
                 Agregar un nuevo Producto
               </button>
-              {open && <ProductoAdmForm onAgregar={agregarProducto} />}
+              {open && <ProductoAdmForm onAgregar={agregarProducto} setOpen={setOpen} />}
             </div>
 
             <div className="col">

@@ -49,7 +49,7 @@ const ProductosLista = () => {
       </section>
 
       <section className="list-group container">
-        <div class="row">
+        <div className="row">
           <article className="card col">
             <i className="fa-solid fa-truck fa-2x"></i>
             <h5>Envío gratis</h5>

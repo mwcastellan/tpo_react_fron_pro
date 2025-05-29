@@ -21,8 +21,18 @@ const Producto = ({ producto }) => {
         <h6 className="card-title">Categoria: {producto.categoria}</h6>
         <h6 className="card-title">Precio: ${producto.precio}</h6>
         <h6 className="card-title">Disponible: {producto.disponible}</h6>
-        {producto.imagen && (
-          <img src={producto.imagen} width="35%" height="35%" />
+        {producto.imagen ? (
+          <img
+            src={producto.imagen}
+            width="20%"
+            height="20%"
+            onError={(e) => {
+              e.target.src =
+                "https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_1280.png";
+            }}
+          />
+        ) : (
+          <p>Imagen no disponible</p>
         )}
         <div
           className="card-title"

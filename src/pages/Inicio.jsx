@@ -43,11 +43,13 @@ const Inicio = () => {
         <div className="Inicio-ubicacion  alert alert-dismissible alert-primary">
           <div className="Inicio-parrafo">
             <h4>Ubicación</h4>
-            <p>
+            <div>
               <i className="fa-solid fa-location-dot"></i>
-              Nos encontramos en el hermoso barrio de Almagro de la Ciudad
-              Autónoma de Buenos Aires.
-            </p>
+              <p>
+                Nos encontramos en el hermoso barrio de Almagro de la Ciudad
+                Autónoma de Buenos Aires.
+              </p>
+            </div>
           </div>
         </div>
         <div className="Inicio-mapa">

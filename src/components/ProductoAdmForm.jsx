@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-function ProductoAdmForm({ onAgregar }) {
+function ProductoAdmForm({ onAgregar, setOpen }) {
   const [producto, setProducto] = useState({
     nombre: "",
     precio: "0",
@@ -13,7 +12,6 @@ function ProductoAdmForm({ onAgregar }) {
   });
 
   const [errores, setErrores] = useState({});
-  const navigate = useNavigate();
 
   const validarFormulario = () => {
     const nuevosErrores = {};
@@ -181,7 +179,10 @@ function ProductoAdmForm({ onAgregar }) {
             <button className="btn btn-secondary" type="submit">
               Agregar
             </button>
-            <button className="btn btn-secondary" onClick={() => navigate(-1)}>
+            <button
+              className="btn btn-secondary"
+              onClick={() => setOpen(false)}
+            >
               Cerrar
             </button>
           </div>

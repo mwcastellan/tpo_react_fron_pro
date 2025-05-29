@@ -9,13 +9,13 @@ const Inicio = () => {
     <>
       <Header />
       <div className="container Inicio-container-grid">
-        <main className="Inicio-main">
+        <main className="Inicio-main card border-secondary mb-3">
           <div className="imagenCarrusel">
             <img className="img-carrusel1" src={carrusel1} />
           </div>
         </main>
-        <aside className="Inicio-aside alert alert-dismissible alert-primary">
-          <article>
+        <aside className="Inicio-aside card border-secondary mb-3">
+          <article className="">
             <h4>Nosotros</h4>
             <p>
               Más que una clínica veterinaria, Veterinaria Clase 25022 es una
@@ -40,7 +40,7 @@ const Inicio = () => {
           </article>
         </aside>
 
-        <div className="Inicio-ubicacion  alert alert-dismissible alert-primary">
+        <div className="Inicio-ubicacion  card border-secondary mb-3">
           <div className="Inicio-parrafo">
             <h4>Ubicación</h4>
             <div>
@@ -52,7 +52,7 @@ const Inicio = () => {
             </div>
           </div>
         </div>
-        <div className="Inicio-mapa">
+        <div className="Inicio-mapa card border-secondary mb-3">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca58c45e009d%3A0x3224fded462a5d2c!2sAv.%20Hip%C3%B3lito%20Yrigoyen%203737%2C%20C1178%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1746200337183!5m2!1ses-419!2sar"
             width="70%"

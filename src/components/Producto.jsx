@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
+import imagenerr from "../assets/404-error-3060993_1280.webp";
 
 /* Producto */
 const Producto = ({ producto }) => {
@@ -27,12 +28,11 @@ const Producto = ({ producto }) => {
             width="20%"
             height="20%"
             onError={(e) => {
-              e.target.src =
-                "https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_1280.png";
+              e.target.src = imagenerr;
             }}
           />
         ) : (
-          <p>Imagen no disponible</p>
+          <img src={imagenerr} width="20%" height="20%" />
         )}
         <div
           className="card-title"

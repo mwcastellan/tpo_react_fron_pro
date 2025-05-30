@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
+import imagenerr from "../assets/404-error-3060993_1280.webp";
 
 /* Producto por ID */
 const ProductoID = () => {
@@ -23,15 +24,14 @@ const ProductoID = () => {
         {producto.imagen ? (
           <img
             src={producto.imagen}
-            width="30%"
-            height="30%"
+            width="25%"
+            height="25%"
             onError={(e) => {
-              e.target.src =
-                "https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_1280.png";
+              e.target.src = imagenerr;
             }}
           />
         ) : (
-          <p>Imagen no disponible</p>
+          <img src={imagenerr} width="25%" height="25%" />
         )}
         <h6 className="card-title">Descripcion1: {producto.descripcion1}</h6>
         <h6 className="card-title">Descripcion2: {producto.descripcion2}</h6>

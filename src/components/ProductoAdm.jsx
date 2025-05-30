@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import imagenerr from "../assets/404-error-3060993_1280.webp";
 
 /* ProductoAdm */
 const ProductoAdm = ({ producto }) => {
@@ -23,12 +24,11 @@ const ProductoAdm = ({ producto }) => {
             width="15%"
             height="15%"
             onError={(e) => {
-              e.target.src =
-                "https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_1280.png";
+              e.target.src =  imagenerr ;
             }}
           />
         ) : (
-          <p>Imagen no disponible</p>
+          <img src={imagenerr} width="15%" height="15%" />
         )}
         <div className="">
           <button className="btn btn-secondary">Modificar</button>

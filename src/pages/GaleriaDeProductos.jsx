@@ -11,12 +11,13 @@ const GaleriaDeProductos = () => {
   return (
     <>
       <Header />
-      {cargandoProductos ? (
-        <img src={loading} alt="loading" />
-      ) : (
-        <ProductosLista />
-      )}
-
+      <main>
+        {cargandoProductos ? (
+          <img src={loading} alt="loading" />
+        ) : (
+          <ProductosLista />
+        )}
+      </main>
       <Footer />
     </>
   );

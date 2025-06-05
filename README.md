@@ -1,12 +1,32 @@
-# React + Vite
+## Curso React Frontend - Clase 25022
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- TRABAJO PRACTICO: tpo-react-fron-pro - https://tpo-react-fron-pro.vercel.app
 
-Currently, two official plugins are available:
+- GITHUB: https://github.com/mwcastellan/tpo_react_fron_pro
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+1. Descarga Node.js desde su sitio oficial e instálalo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Abre una terminal y ejecuta el siguiente comando para crear un proyecto React:
+npm create vite@latest (Si crea Proyecto). Selecciona React como framework y configura el proyecto.
+
+3. Ingresar al directorio e Instala las dependencias del proyecto
+npm install
+npm install react-router-dom
+
+4. Inicia el servidor local para ver tu aplicación:
+npm run dev
+
+5. Ir a http://localhost:nnnn/ donde nnnn es el puerto asignado.
+
+6. Usuario para Testing:
+{   "email": "admin@tporeact.com",
+    "password": "admin123",
+    "role": "admin",
+    "id": "1"
+},
+{   "email": "client@tporeact.com",
+    "password": "client123",
+    "role": "client",
+    "id": "2"
+},

@@ -53,16 +53,7 @@ const Inicio = () => {
           </div>
         </div>
         <div className="Inicio-mapa card border-secondary mb-3">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca58c45e009d%3A0x3224fded462a5d2c!2sAv.%20Hip%C3%B3lito%20Yrigoyen%203737%2C%20C1178%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1746200337183!5m2!1ses-419!2sar"
-            width="70%"
-            height="70%"
-            frameBorder="0"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            aria-hidden="false"
-            tabIndex="0"
-          />
+          
         </div>
       </div>
 

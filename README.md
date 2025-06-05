@@ -1,6 +1,8 @@
 ## Curso React Frontend - Clase 25022
 
-- TRABAJO PRACTICO: tpo-react-fron-pro - https://tpo-react-fron-pro.vercel.app
+- TRABAJO PRACTICO:
+  . Vercel: tpo-react-fron-pro - https://tpo-react-fron-pro.vercel.app
+  . Netifly: tpo-react-fron-pro - https://tpo-react-fron-pro.netlify.app
 
 - GITHUB: https://github.com/mwcastellan/tpo_react_fron_pro
 

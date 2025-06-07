@@ -37,7 +37,6 @@
 .cart-cab {
   background-color: #a597be;
   text-align: center;
- 
 }
 .cart-drawer.open {
   transform: translateX(0%);
@@ -53,7 +52,7 @@
 }
 
 .cart-content {
-  padding:10px;
+  padding: 10px;
   list-style: none;
 }
 
@@ -90,6 +89,13 @@
   margin: 0;
   padding: 0.5rem;
 }
+
+/* Producto */
+.Producto_header {
+  background-color: #a597be;
+  text-align: center;
+}
+
 /* Small devices (600px and down) */
 @media only screen and (max-width: 600px) {
   .ProductosLista {
@@ -180,13 +186,6 @@
   }
 }
 
-/* Contacto */
-.ContactoFieldset {
-  border: 1px solid;
-  margin: 5rem;
-  padding: 1rem;
-}
-
 /* Notas Pie de Productos */
 .Footer {
   padding: 10px;
@@ -220,10 +219,4 @@
 .notfound-text {
   font-size: 1rem;
   margin-bottom: 2rem;
-}
-
-/* Producto */
-.Producto_header {
-  background-color: #a597be;
-  text-align: center;
 }

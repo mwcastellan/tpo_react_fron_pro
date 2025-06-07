@@ -1,5 +1,7 @@
-import React, {useContext } from "react";
+import React, { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
+import { RiCloseLargeFill } from "react-icons/ri";
+import { GoTrash } from "react-icons/go";
 
 /* Carrito de Compras */
 const Carrito = () => {
@@ -7,17 +9,15 @@ const Carrito = () => {
     useContext(CarritoContext);
 
   return (
-    <div className={`bg-primary cart-drawer ${isCarritoOpen ? "open" : ""}`}>
-      <div className="cart cart-header bg-primary">
-        <h2>Carrito de Compras</h2>
+    <div className={`cart-drawer ${isCarritoOpen ? "open" : ""}`}>
+      <div className="cart-header">
+        <h5>Carrito de Compras</h5>
 
         <button
+          className="cart-btn-close"
           onClick={() => setCarritoOpen(false)}
-          type="button"
-          className="btn btn-secondary"
-          data-bs-dismiss="modal"
         >
-          <i className="far fa-window-close"></i>
+          <RiCloseLargeFill color="black" />
         </button>
       </div>
       <div className="cart-content">
@@ -25,31 +25,32 @@ const Carrito = () => {
           <p>El carrito está vacío.</p>
         ) : (
           <section>
-            <ul className="card-header">
+            <ul className="cart-content">
               {carrito.map((item, index) => (
-                <li
-                  className="card-body d-flex justify-content-between align-items-center"
-                  key={index}
-                  style={{ fontSize: "85%" }}
-                >
+                <li className="" key={index} style={{ fontSize: "80%" }}>
                   <article className="card">
                     <ul>
-                      <li className="card-header d-flex justify-content-between align-items-center">
-                        <img src={item.imagen} width="15%" height="15%" />
-                        <b>{item.nombre} </b>
-                        <span>Precio ${item.precio}</span>
-                        <span>Disponible {item.disponible}</span>
-                      </li>
-                      <li className="card-body d-flex justify-content-between align-items-center">
-                        <span className="badge bg-primary rounded-pill">
-                          Cantidad {item.cantidad}
+                      <li style={{ listStyle: "none" }}>
+                        <span className="cart-cab">
+                          <img src={item.imagen} width="15%" height="15%" />
+                          {item.nombre}
                         </span>
-                        <span className="badge bg-secondary rounded-pill">
-                          Total ${item.cantidad * item.precio}
+                        <span>
+                          <p>
+                            Precio ${item.precio} - Cantidad {item.cantidad}
+                          </p>
                         </span>
-                        <button onClick={() => handleDeleteFromCarrito(item)}>
-                          <i className="fa-solid fa-trash"></i>
-                        </button>
+                        <span>
+                          <p>
+                            Total ${item.cantidad * item.precio}
+                            <button
+                              className="cart-btn-trash"
+                              onClick={() => handleDeleteFromCarrito(item)}
+                            >
+                              <GoTrash color="black" />
+                            </button>
+                          </p>
+                        </span>
                       </li>
                     </ul>
                   </article>

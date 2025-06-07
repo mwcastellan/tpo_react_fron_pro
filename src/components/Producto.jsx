@@ -12,8 +12,8 @@ const Producto = ({ producto }) => {
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
-    <article className="card border-light mb-3" style={{ maxWidth: "20rem" }}>
-      <div className="card-header">
+    <article className="card border-dark" style={{ maxWidth: "20rem" }}>
+      <div className="Producto_header">
         <h5>{producto.nombre}</h5>
       </div>
       <div className="card-body">
@@ -71,9 +71,9 @@ const Producto = ({ producto }) => {
         <div className="card-title">
           <button
             className="btn btn-secondary"
-            onClick={() =>
-              handleAddToCarrito({ ...producto, cantidad: cantidad })
-            }
+            onClick={() => {
+              handleAddToCarrito({ ...producto, cantidad: cantidad });
+            }}
           >
             Agregar
           </button>

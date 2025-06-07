@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AutorizarContext } from "../../context/AutorizarContext";
 import Logo from "../../assets/react.svg";
 /* HeaderAdm */
@@ -7,25 +7,34 @@ const HeaderAdm = () => {
   const { isAutorizado, setIsAutorizado, usuario } =
     useContext(AutorizarContext);
   return (
-    <header className="Header bg-primary">
-      <h2>Veterinaria Pro - Curso React Frontend - Clase 25022</h2>
-
-      <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <header>
+       <nav className="navbar navbar-expand-lg Navbar_cab">
         <div className="container-fluid">
-          <div className="navbar-collapse" id="navbarColor01">
-            <ul className="navbar-nav">
-              <li className="nav-item nav-link">
-                <img src={Logo} />
-              </li>
+          <img src={Logo} />
+          <a className="navbar-brand" href="/">
+            Veterinaria Pro - Curso React Frontend
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                <NavLink className="link Header-link" to="/">
                   Inicio
-                </Link>
+                </NavLink>
               </li>
-
               <li className="nav-item">
                 <Link
-                  className="nav-link ms-auto"
+                  className="link  Header-link"
                   onClick={() => {
                     setIsAutorizado(false);
                     localStorage.removeItem("autorizadoToken");
@@ -35,7 +44,7 @@ const HeaderAdm = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link">
+                <Link className="link Header-link">
                   {isAutorizado
                     ? "Bienvenido usuario autenticado: " + usuario
                     : ""}

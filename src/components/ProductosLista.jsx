@@ -43,7 +43,7 @@ const ProductosLista = () => {
       </section>
 
       <section className="list-group container">
-        <div className="row">
+        <div className="ProductosLista">
           {productosFiltrados.map((producto) => (
             <Producto key={producto.id} producto={producto} />
           ))}

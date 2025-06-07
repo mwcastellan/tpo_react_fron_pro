@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import HeaderAdm from "../components/estaticos/HeaderAdm";
 import { useAutorizar } from "../context/AutorizarContext";
+import FooterAdm from "../components/estaticos/FooterAdm";
 
 /* Login */
 const Login = () => {
@@ -21,7 +22,7 @@ const Login = () => {
 
       <section className="container">
         <section style={{ maxWidth: "60rem" }}>
-          <form onSubmit={handleEnviar}>
+          <form onSubmit={handleEnviar} className="p-4 border rounded shadow">
             <fieldset className="ContactoFieldset">
               <label className="form-label mt-4">Email:</label>
               <input
@@ -52,6 +53,7 @@ const Login = () => {
           </form>
         </section>
       </section>
+      <FooterAdm />
     </>
   );
 };

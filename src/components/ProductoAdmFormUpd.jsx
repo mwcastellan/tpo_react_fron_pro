@@ -22,10 +22,10 @@ function ProductoAdmFormUpd({ seleccionado }) {
   };
 
   return (
-    <div className="bg-primary cart-drawer open">
+    <div className="cart-drawer open">
       <h2>Modificar productos</h2>
       <article className="card border-secondary" style={{ maxWidth: "23rem" }}>
-        <form onSubmit={handleSubmitUpd}>
+        <form onSubmit={handleSubmitUpd} className="p-4 border rounded shadow">
           <fieldset>
             <div className="card-body">
               <label className="form-label">Articulo: {producto.id}</label>

@@ -41,10 +41,10 @@ function ProductoAdmFormAdd() {
   };
 
   return (
-    <div className="bg-primary cart-drawer open">
+    <div className="cart-drawer open">
       <h2>Agregar productos</h2>
       <article className="card border-secondary" style={{ maxWidth: "23rem" }}>
-        <form onSubmit={handleSubmitAdd}>
+        <form onSubmit={handleSubmitAdd} className="p-4 border rounded shadow">
           <fieldset>
             <div className="card-body">
               <label className="form-label">Nombre: </label>

@@ -1,4 +1,7 @@
 import { createContext, useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 /* Variables y Procedimiento globales para Carrito */
 export const CarritoContext = createContext();
 
@@ -43,6 +46,7 @@ export const CarritoProvider = ({ children }) => {
     const productoExist = carrito.find((item) => item.id === producto.id);
 
     if (productoExist) {
+      toast.success(`El producto ${producto.nombre} se ha actualizado en el carrito`);
       setCarrito(
         carrito.map((item) =>
           item.id === producto.id
@@ -57,6 +61,7 @@ export const CarritoProvider = ({ children }) => {
         )
       );
     } else {
+      toast.success(`El producto ${producto.nombre} se ha agregado al carrito`);
       setCarrito([...carrito, producto]);
     }
   };

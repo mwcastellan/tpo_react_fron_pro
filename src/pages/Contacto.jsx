@@ -19,8 +19,8 @@ const Contacto = () => {
 
       <section className="container">
         <section style={{ maxWidth: "60rem" }}>
-          <form action="/" method="POST">
-            <fieldset className="ContactoFieldset">
+          <form action="/" method="POST" className="p-4 border rounded shadow">
+            <fieldset className="ContactoFieldset mb-3">
               <h4>Turnos</h4>
               <div>
                 <label htmlFor="nombreDueño" className="form-label mt-4">
@@ -164,8 +164,8 @@ const Contacto = () => {
           </form>
         </section>
         <section style={{ maxWidth: "60rem" }}>
-          <form action="/" method="POST">
-            <fieldset className="ContactoFieldset">
+          <form action="/" method="POST" className="p-4 border rounded shadow">
+            <fieldset className="ContactoFieldset mb-3">
               <h4>Contáctenos</h4>
               <div>
                 <label htmlFor="nombreCompleto" className="form-label mt-5">

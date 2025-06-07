@@ -17,8 +17,10 @@ const ProductoAdm = ({ producto }) => {
   } = useContext(AdministrarContext);
 
   return (
-    <article className="card border-light mb-3" style={{ maxWidth: "20rem" }}>
-      <h5 className="card-header">{producto.nombre}</h5>
+    <article className="card border-dark" style={{ maxWidth: "20rem" }}>
+      <div className="Producto_header">
+        <h5>{producto.nombre}</h5>
+      </div>
       <div className="card-body">
         <h6 className="card-title">Articulo: {producto.id}</h6>
         <h6 className="card-title">Categoria: {producto.categoria}</h6>

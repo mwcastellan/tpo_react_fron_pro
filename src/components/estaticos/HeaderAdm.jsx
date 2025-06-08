@@ -8,12 +8,23 @@ const HeaderAdm = () => {
     useContext(AutorizarContext);
   return (
     <header>
-       <nav className="navbar navbar-expand-lg Navbar_cab">
+      <nav className="navbar navbar-expand-lg Navbar_cab">
         <div className="container-fluid">
-          <img src={Logo} />
-          <a className="navbar-brand" href="/">
-            Veterinaria Pro - Curso React Frontend
-          </a>
+          <div className="navbar-brand">
+            <div className="row">
+              <div className="col">
+                <img
+                  src={Logo}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </div>
+              <div className="col">
+                <p>Veterinaria Pro - Curso React Frontend</p>
+              </div>
+            </div>
+          </div>
           <button
             className="navbar-toggler"
             type="button"
@@ -26,7 +37,7 @@ const HeaderAdm = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+            <ul className=" navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink className="link Header-link" to="/">
                   Inicio

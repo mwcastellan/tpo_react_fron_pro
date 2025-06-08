@@ -46,7 +46,7 @@ const Login = () => {
                 {errors.password && <div>{errors.password}</div>}
               </small>
               <br />
-              <button type="submit" className="btn btn-secondary">
+              <button type="submit" className="col BtnBoton">
                 Enviar
               </button>
             </fieldset>

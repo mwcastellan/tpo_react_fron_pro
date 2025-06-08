@@ -27,38 +27,70 @@ const Carrito = () => {
           <section>
             <ul className="cart-content">
               {carrito.map((item, index) => (
-                <li className="" key={index} style={{ fontSize: "80%" }}>
-                  <article className="card">
-                    <ul>
-                      <li style={{ listStyle: "none" }}>
-                        <span className="cart-cab">
-                          <img src={item.imagen} width="15%" height="15%" />
-                          {item.nombre}
-                        </span>
-                        <span>
-                          <p>
-                            Precio ${item.precio} - Cantidad {item.cantidad}
-                          </p>
-                        </span>
-                        <span>
-                          <p>
-                            Total ${item.cantidad * item.precio}
-                            <button
-                              className="cart-btn-trash"
-                              onClick={() => handleDeleteFromCarrito(item)}
-                            >
-                              <GoTrash color="black" />
-                            </button>
-                          </p>
-                        </span>
-                      </li>
-                    </ul>
+                <li key={item.id}>
+                  <article
+                    className="card border-dark"
+                    style={{
+                      maxWidth: "250px",
+                      margin: "10px 5px",
+                      padding: "0.5rem",
+                      border: "1px solid #eee",
+                      borderRadius: "15px",
+                      boxShadow: "0 2px 8px  #6f42c1",
+                      background: "#fff",
+                    }}
+                  >
+                    <div className="Producto_header">
+                      <h6>{item.nombre}</h6>
+                    </div>
+                    <div className="card-body">
+                      <h6 className="card-title">Articulo: {item.id}</h6>
+                      <p className="card-title">Precio: ${item.precio}</p>
+                      <p className="card-title">
+                        Cantidad: {item.cantidad} - Total $
+                        {item.cantidad * item.precio}
+                      </p>
+
+                      {item.imagen ? (
+                        <img
+                          src={item.imagen}
+                          style={{
+                            width: "40%",
+                            maxHeight: "300px",
+                            objectFit: "cover",
+                            borderRadius: "8px",
+                            marginBottom: "0.5rem",
+                          }}
+                          onError={(e) => {
+                            e.target.src = imagenerr;
+                          }}
+                        />
+                      ) : (
+                        <img src={imagenerr} width="100%" height="100%" />
+                      )}
+                    </div>
+                    <button
+                      className="cart-btn-trash"
+                      onClick={() => handleDeleteFromCarrito(item)}
+                    >
+                      <GoTrash color="black" />
+                    </button>
                   </article>
                 </li>
               ))}
             </ul>
             <br />
-            <button className="btn btn-secondary">Confirmar</button>
+            <h6>
+              <p style={{ color: "blue" }}>
+                Total general: $
+                {carrito.reduce(
+                  (total, item) => total + item.precio * item.cantidad,
+                  0
+                )}
+              </p>
+            </h6>
+
+            <button className="BtnBoton">Confirmar</button>
           </section>
         )}
       </div>

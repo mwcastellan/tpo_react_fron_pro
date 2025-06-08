@@ -8,7 +8,7 @@ const Inicio = () => {
   return (
     <>
       <Header />
-      <div className="container Inicio-container-grid">
+      <div className="container Inicio-container-grid  p-4 border rounded shadow">
         <main className="Inicio-main card border-secondary mb-3">
           <div className="imagenCarrusel">
             <img className="img-carrusel1" src={carrusel1} />

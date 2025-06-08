@@ -12,7 +12,18 @@ const Producto = ({ producto }) => {
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
-    <article className="card border-dark" style={{ maxWidth: "20rem" }}>
+    <article
+      className="card border-dark"
+      style={{
+        maxWidth: "600px",
+        margin: "10px 10px",
+        padding: "1rem",
+        border: "1px solid #eee",
+        borderRadius: "15px",
+        boxShadow: "0 2px 8px  #6f42c1",
+        background: "#fff",
+      }}
+    >
       <div className="Producto_header">
         <h5>{producto.nombre}</h5>
       </div>
@@ -24,14 +35,19 @@ const Producto = ({ producto }) => {
         {producto.imagen ? (
           <img
             src={producto.imagen}
-            width="20%"
-            height="20%"
+            style={{
+              width: "50%",
+              maxHeight: "300px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              marginBottom: "0.5rem",
+            }}
             onError={(e) => {
               e.target.src = imagenerr;
             }}
           />
         ) : (
-          <img src={imagenerr} width="20%" height="20%" />
+          <img src={imagenerr} width="100%" height="100%" />
         )}
         <div
           className="card-title"
@@ -68,9 +84,9 @@ const Producto = ({ producto }) => {
             +
           </button>
         </div>
-        <div className="card-title">
+        <div className="card-title row">
           <button
-            className="btn btn-secondary"
+            className="col BtnBoton"
             onClick={() => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}
@@ -78,11 +94,8 @@ const Producto = ({ producto }) => {
             Agregar
           </button>
 
-          <Link
-            className="btn btn-outline-info"
-            to={`/productos/${producto.id}`}
-          >
-            Más información
+          <Link className="col" to={`/productos/${producto.id}`}>
+            Ver más
           </Link>
         </div>
       </div>

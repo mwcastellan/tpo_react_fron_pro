@@ -27,13 +27,13 @@
   width: 20rem;
   height: 70%;
   background: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   z-index: 999;
   overflow-y: auto;
   text-align: center;
 }
+
 .cart-cab {
   background-color: #a597be;
   text-align: center;
@@ -73,6 +73,18 @@
   background-color: transparent;
   border: none;
 }
+
+/* Boton */
+.BtnBoton {
+  background-color: #a597be;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 10px 10px auto;
+  padding: 10px;
+  font-size: 15px;
+}
+
 /* Linea encabezado de productos */
 .ProductList_Filtro {
   border: transparent;

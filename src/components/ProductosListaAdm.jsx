@@ -25,7 +25,7 @@ const ProductosListaAdm = () => {
             </div>
             <div className="col">
               <button
-                className="btn btn-secondary"
+                className="BtnBoton"
                 onClick={() => setOpenAdd(true)}
               >
                 Agregar un nuevo Producto

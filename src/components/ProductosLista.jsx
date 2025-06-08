@@ -50,27 +50,33 @@ const ProductosLista = () => {
         </div>
       </section>
 
-      <section className="list-group container">
-        <div className="row">
-          <article className="card col">
+      <section className="list-group">
+        <div
+          className="row"
+          style={{
+            margin: "10px 10px",
+            padding: "0rem",
+          }}
+        >
+          <article className="col-sm">
             <i className="fa-solid fa-truck fa-2x"></i>
             <h5>Envío gratis</h5>
             <p>En compras mayores a $22000</p>
           </article>
 
-          <article className="card col">
+          <article className="col-sm">
             <i className="fa-solid fa-cart-shopping fa-2x"></i>
             <h5>Beneficios</h5>
             <p>En todas tus compras</p>
           </article>
 
-          <article className="card col">
+          <article className="col-sm">
             <i className="fa-regular fa-credit-card fa-2x"></i>
             <h5>Todos los medios de pago</h5>
             <p>Tarjetas de crédito, débito o efectivo</p>
           </article>
 
-          <article className="card col">
+          <article className="col-sm">
             <i className="fa-solid fa-location-dot fa-2x"></i>
             <h5>Retiro en tienda</h5>
             <p>Beneficios y regalos exclusivos</p>

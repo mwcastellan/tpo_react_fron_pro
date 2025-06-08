@@ -15,7 +15,18 @@ const ProductoID = () => {
   return (
     <>
       <Header />
-      <article className="card border-dark" style={{ maxWidth: "20rem" }}>
+      <article
+        className="card border-dark"
+        style={{
+          maxWidth: "600px",
+          margin: "10px 10px",
+          padding: "0rem",
+          border: "1px solid #eee",
+          borderRadius: "15px",
+          boxShadow: "0 2px 8px  #6f42c1",
+          background: "#fff",
+        }}
+      >
         <div className="Producto_header">
           <h5>{producto.nombre}</h5>
         </div>
@@ -27,10 +38,12 @@ const ProductoID = () => {
           {producto.imagen ? (
             <img
               src={producto.imagen}
-              width="25%"
-              height="25%"
-              onError={(e) => {
-                e.target.src = imagenerr;
+              style={{
+                width: "50%",
+                maxHeight: "300px",
+                objectFit: "cover",
+                borderRadius: "8px",
+                marginBottom: "0.5rem",
               }}
             />
           ) : (
@@ -39,7 +52,7 @@ const ProductoID = () => {
           <h6 className="card-title">Descripcion1: {producto.descripcion1}</h6>
           <h6 className="card-title">Descripcion2: {producto.descripcion2}</h6>
 
-          <button className="btn btn-secondary" onClick={() => navigate(-1)}>
+          <button className="BtnBoton" onClick={() => navigate(-1)}>
             Volver
           </button>
         </div>

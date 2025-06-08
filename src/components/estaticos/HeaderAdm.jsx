@@ -15,10 +15,9 @@ const HeaderAdm = () => {
               <div className="col">
                 <img
                   src={Logo}
-                 style={{
-                    width: "90%",
-                    maxHeight: "10px",
-                    objectFit:"none",
+                  style={{
+                    width: "100%",
+                    maxHeight: "50px",
                   }}
                 />
               </div>

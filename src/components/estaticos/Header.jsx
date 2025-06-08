@@ -21,7 +21,6 @@ const Header = () => {
                   style={{
                     width: "100%",
                     maxHeight: "50px",
-                    
                   }}
                 />
               </div>

@@ -19,9 +19,9 @@ const Header = () => {
                 <img
                   src={Logo}
                   style={{
-                    width: "90%",
-                    maxHeight: "40px",
-                    objectFit: "cover",
+                    width: "100%",
+                    maxHeight: "50px",
+                    
                   }}
                 />
               </div>

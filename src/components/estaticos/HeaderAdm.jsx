@@ -17,8 +17,8 @@ const HeaderAdm = () => {
                   src={Logo}
                  style={{
                     width: "90%",
-                    maxHeight: "40px",
-                    objectFit: "cover",
+                    maxHeight: "10px",
+                    objectFit:"none",
                   }}
                 />
               </div>

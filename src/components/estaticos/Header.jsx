@@ -15,15 +15,17 @@ const Header = () => {
         <div className="container-fluid">
           <div className="navbar-brand">
             <div className="row">
-                   <div className="col">
+              <div className="col">
                 <img
                   src={Logo}
                   style={{
-                    width: "100%",
+                    width: "90%",
+                    maxHeight: "40px",
+                    objectFit: "cover",
                   }}
                 />
               </div>
-                   <div className="col">
+              <div className="col">
                 <p>Veterinaria Pro - Curso React Frontend</p>
               </div>
             </div>

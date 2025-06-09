@@ -20,13 +20,7 @@ const Header = () => {
           <div className="navbar-brand">
             <div className="row">
               <div className="col">
-                <img
-                  src={Logo}
-                  style={{
-                    width: "100%",
-                    maxHeight: "50px",
-                  }}
-                />
+                
               </div>
               <div className="col">
                 <h3>Veterinaria Pro - Curso React Frontend</h3>

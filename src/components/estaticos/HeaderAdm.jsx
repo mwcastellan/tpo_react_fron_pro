@@ -22,7 +22,7 @@ const HeaderAdm = () => {
                 />
               </div>
               <div className="col">
-                <h3>Veterinaria Pro - Curso React Frontend</h3>
+                <h4>Veterinaria - Curso React Frontend</h4>
               </div>
             </div>
           </div>

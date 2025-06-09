@@ -14,24 +14,23 @@ import RutaProtegida from "./auth/RutasProtegidas";
 
 /* APP */
 function App() {
-
   return (
     <Routes>
       <Route path="/" element={<Inicio />} />
       <Route path="/productos" element={<GaleriaDeProductos />} />
-      <Route path="/adoptame" element={<Adoptame />} />
-      <Route path="/contacto" element={<Contacto />} />
-      <Route path="*" element={<NotFound />} />
       <Route path="/productos/:id" element={<ProductoID />} />
-      <Route path="/login" element={<Login />} />
       <Route
         path="/administrar"
         element={
-          <RutaProtegida >
+          <RutaProtegida>
             <Administrar />
           </RutaProtegida>
         }
       />
+      <Route path="/login" element={<Login />} />
+      <Route path="/adoptame" element={<Adoptame />} />
+      <Route path="/contacto" element={<Contacto />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

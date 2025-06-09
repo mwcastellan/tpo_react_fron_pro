@@ -16,7 +16,7 @@ function ProductoAdmFormDlt({ seleccionado }) {
 
   return (
     <div className="cart-drawer open">
-      <div className="Producto_header">
+      <div className="heaProducto">
         <h5>Eliminar productos</h5>
       </div>
       <article
@@ -31,7 +31,7 @@ function ProductoAdmFormDlt({ seleccionado }) {
         }}
       >
         <form onSubmit={handleSubmitDlt} className="p-4 border rounded shadow">
-          <div className="Producto_header">
+          <div className="heaProducto">
             <h5>{producto.nombre}</h5>
           </div>
           <div className="card-body">
@@ -40,11 +40,11 @@ function ProductoAdmFormDlt({ seleccionado }) {
             <h6 className="card-title">Precio: ${producto.precio}</h6>
             <h6 className="card-title">Disponible: {producto.disponible}</h6>
             <div className="card-title row">
-              <button className="col BtnBoton" type="submit">
+              <button className="col btnBoton" type="submit">
                 Eliminar
               </button>
               <button
-                className="col BtnBoton"
+                className="col btnBoton"
                 onClick={() => {
                   setOpenDlt(false);
                   setActProducto(false);

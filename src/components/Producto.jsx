@@ -24,7 +24,7 @@ const Producto = ({ producto }) => {
         background: "#fff",
       }}
     >
-      <div className="Producto_header">
+      <div className="heaProducto">
         <h5>{producto.nombre}</h5>
       </div>
       <div className="card-body">
@@ -86,7 +86,7 @@ const Producto = ({ producto }) => {
         </div>
         <div className="card-title row">
           <button
-            className="col BtnBoton"
+            className="col btnBoton"
             onClick={() => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}

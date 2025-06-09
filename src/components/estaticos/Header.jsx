@@ -7,11 +7,15 @@ import { FaCartShopping } from "react-icons/fa6";
 
 /* Header */
 const Header = () => {
-  const { setCarritoOpen } = useContext(CarritoContext);
+  const { setCarritoOpen, isCarritoOpen, carrito } = useContext(CarritoContext);
+
+  const calCntCarrito = () => {
+    return carrito.reduce((total, item) => total + item.cantidad, 0);
+  };
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg Navbar_cab">
+      <nav className="navbar navbar-expand-lg cabNavbar">
         <div className="container-fluid">
           <div className="navbar-brand">
             <div className="row">
@@ -25,7 +29,7 @@ const Header = () => {
                 />
               </div>
               <div className="col">
-                <p>Veterinaria Pro - Curso React Frontend</p>
+                <h3>Veterinaria Pro - Curso React Frontend</h3>
               </div>
             </div>
           </div>
@@ -41,29 +45,29 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className=" navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="link Header-link" to="/">
+                <NavLink className="link Healink" to="/">
                   Inicio
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="link Header-link" to="/productos">
+                <NavLink className="link Healink" to="/productos">
                   Galeria de Productos
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="link Header-link" to="/adoptame">
+                <NavLink className="link Healink" to="/adoptame">
                   Adoptame
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="link Header-link" to="/contacto">
+                <NavLink className="link Healink" to="/contacto">
                   Contacto
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="link Header-link" to="/administrar">
+                <NavLink className="link Healink" to="/administrar">
                   Administrar
                 </NavLink>
               </li>
@@ -74,8 +78,11 @@ const Header = () => {
                 >
                   <FaCartShopping />
                 </button>
-                <Carrito />
               </li>
+              <li className="nav-item">
+                <p>[{calCntCarrito()}]</p>
+              </li>
+              <Carrito />
             </ul>
           </div>
         </div>

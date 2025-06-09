@@ -14,7 +14,7 @@ const ProductosLista = () => {
   } = useContext(CarritoContext);
   return (
     <>
-      <section className="ProductList_Filtro">
+      <section className="lstProducto_Filtro">
         <div className="container">
           <div className="row">
             <div className="col">
@@ -43,7 +43,7 @@ const ProductosLista = () => {
       </section>
 
       <section className="list-group container">
-        <div className="ProductosLista">
+        <div className="lstProducto">
           {productosFiltrados.map((producto) => (
             <Producto key={producto.id} producto={producto} />
           ))}

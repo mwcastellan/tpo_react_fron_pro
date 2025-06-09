@@ -23,7 +23,7 @@ function ProductoAdmFormUpd({ seleccionado }) {
 
   return (
     <div className="cart-drawer open">
-      <div className="Producto_header">
+      <div className="heaProducto">
         <h5>Modificar productos</h5>
       </div>
 
@@ -143,11 +143,11 @@ function ProductoAdmFormUpd({ seleccionado }) {
               <p style={{ color: "red" }}>{errores.categoria}</p>
             )}
             <div className="card-title row">
-              <button className="col BtnBoton" type="submit">
+              <button className="col btnBoton" type="submit">
                 Modificar
               </button>
               <button
-                className="col BtnBoton"
+                className="col btnBoton"
                 onClick={() => {
                   setOpenUpd(false);
                   setActProducto(false);

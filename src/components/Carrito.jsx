@@ -40,7 +40,7 @@ const Carrito = () => {
                       background: "#fff",
                     }}
                   >
-                    <div className="Producto_header">
+                    <div className="heaProducto">
                       <h6>{item.nombre}</h6>
                     </div>
                     <div className="card-body">
@@ -90,7 +90,7 @@ const Carrito = () => {
               </p>
             </h6>
 
-            <button className="BtnBoton">Confirmar</button>
+            <button className="btnBoton">Confirmar</button>
           </section>
         )}
       </div>

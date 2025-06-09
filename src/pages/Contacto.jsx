@@ -7,7 +7,7 @@ const Contacto = () => {
   return (
     <>
       <Header />
-      <section className="ProductList_Filtro">
+      <section className="lstProducto_Filtro">
         <div className="container">
           <div className="row">
             <div className="col">
@@ -138,7 +138,7 @@ const Contacto = () => {
             <br />
           </div>
           <div>
-            <button type="submit" className="btn btn-secondary">
+            <button type="submit" className="btnBoton">
               Enviar
             </button>
           </div>
@@ -199,7 +199,7 @@ const Contacto = () => {
             <br />
           </div>
           <div>
-            <button type="submit" className="btn btn-secondary">
+            <button type="submit" className="btnBoton">
               Enviar
             </button>
           </div>

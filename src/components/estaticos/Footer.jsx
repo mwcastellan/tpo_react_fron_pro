@@ -7,7 +7,7 @@ import imgGithub from "../../assets/github-brands.svg";
 /* Footer */
 const Footer = () => {
   return (
-    <footer className="Footer footer">
+    <footer className="PrdFooter footer">
       <div className="cointaner">
         <div>
           <a

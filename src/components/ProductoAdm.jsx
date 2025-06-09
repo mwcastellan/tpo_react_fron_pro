@@ -29,7 +29,7 @@ const ProductoAdm = ({ producto }) => {
         background: "#fff",
       }}
     >
-      <div className="Producto_header">
+      <div className="heaProducto">
         <h5>{producto.nombre}</h5>
       </div>
       <div className="card-body">
@@ -59,7 +59,7 @@ const ProductoAdm = ({ producto }) => {
         )}
         <div className="card-title row">
           <button
-            className="col BtnBoton"
+            className="col btnBoton"
             onClick={() => {
               setOpenUpd(true);
               setSeleccionado(producto);
@@ -68,7 +68,7 @@ const ProductoAdm = ({ producto }) => {
             Modificar
           </button>
           <button
-            className="col BtnBoton"
+            className="col btnBoton"
             onClick={() => {
               setOpenDlt(true);
               setSeleccionado(producto);

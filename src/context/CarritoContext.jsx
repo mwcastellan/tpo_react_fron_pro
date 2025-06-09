@@ -46,7 +46,9 @@ export const CarritoProvider = ({ children }) => {
     const productoExist = carrito.find((item) => item.id === producto.id);
 
     if (productoExist) {
-      toast.success(`El producto ${producto.nombre} se ha actualizado en el carrito`);
+      toast.success(
+        `El producto ${producto.nombre} se ha actualizado en el carrito`
+      );
       setCarrito(
         carrito.map((item) =>
           item.id === producto.id

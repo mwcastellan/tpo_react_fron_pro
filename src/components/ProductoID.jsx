@@ -27,7 +27,7 @@ const ProductoID = () => {
           background: "#fff",
         }}
       >
-        <div className="Producto_header">
+        <div className="heaProducto">
           <h5>{producto.nombre}</h5>
         </div>
         <div className="card-body">
@@ -52,7 +52,7 @@ const ProductoID = () => {
           <h6 className="card-title">Descripcion1: {producto.descripcion1}</h6>
           <h6 className="card-title">Descripcion2: {producto.descripcion2}</h6>
 
-          <button className="BtnBoton" onClick={() => navigate(-1)}>
+          <button className="btnBoton" onClick={() => navigate(-1)}>
             Volver
           </button>
         </div>

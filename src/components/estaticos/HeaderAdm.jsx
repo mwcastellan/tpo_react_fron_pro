@@ -8,7 +8,7 @@ const HeaderAdm = () => {
     useContext(AutorizarContext);
   return (
     <header>
-      <nav className="navbar navbar-expand-lg Navbar_cab">
+      <nav className="navbar navbar-expand-lg cabNavbar">
         <div className="container-fluid">
           <div className="navbar-brand">
             <div className="row">
@@ -22,7 +22,7 @@ const HeaderAdm = () => {
                 />
               </div>
               <div className="col">
-                <p>Veterinaria Pro - Curso React Frontend</p>
+                <h3>Veterinaria Pro - Curso React Frontend</h3>
               </div>
             </div>
           </div>
@@ -40,13 +40,13 @@ const HeaderAdm = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className=" navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="link Header-link" to="/">
+                <NavLink className="link Healink" to="/">
                   Inicio
                 </NavLink>
               </li>
               <li className="nav-item">
                 <Link
-                  className="link  Header-link"
+                  className="link  Healink"
                   onClick={() => {
                     setIsAutorizado(false);
                     localStorage.removeItem("autorizadoToken");
@@ -56,7 +56,7 @@ const HeaderAdm = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="link Header-link">
+                <Link className="link Healink">
                   {isAutorizado
                     ? "Bienvenido usuario autenticado: " + usuario
                     : ""}

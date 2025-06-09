@@ -10,7 +10,7 @@ const Adoptame = () => {
   return (
     <>
       <Header />
-      <section className="ProductList_Filtro">
+      <section className="lstProducto_Filtro">
         <div className="container">
           <div className="row">
             <div className="col">

@@ -42,7 +42,7 @@ function ProductoAdmFormAdd() {
 
   return (
     <div className="cart-drawer open">
-      <div className="Producto_header">
+      <div className="heaProducto">
         <h5>Agregar productos</h5>
       </div>
 
@@ -161,11 +161,11 @@ function ProductoAdmFormAdd() {
             )}
 
             <div className="card-title row">
-              <button className="col BtnBoton" type="submit">
+              <button className="col btnBoton" type="submit">
                 Agregar
               </button>
               <button
-                className="col BtnBoton"
+                className="col btnBoton"
                 onClick={() => {
                   setOpenAdd(false);
                   setActProducto(false);

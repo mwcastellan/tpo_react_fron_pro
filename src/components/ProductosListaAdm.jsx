@@ -17,18 +17,18 @@ const ProductosListaAdm = () => {
 
   return (
     <>
-      <section className="ProductList_Filtro">
+      <section className="lstProducto_Filtro">
         <div className="container">
           <div className="row">
             <div className="col">
-              <h4>Administrar los productos:</h4>
+              <h4>Administración de productos:</h4>
             </div>
             <div className="col">
               <button
-                className="BtnBoton"
+                className="btnBoton"
                 onClick={() => setOpenAdd(true)}
               >
-                Agregar un nuevo Producto
+                Agregar Producto
               </button>
               {openAdd && <ProductoAdmFormAdd />}
             </div>
@@ -55,7 +55,7 @@ const ProductosListaAdm = () => {
         </div>
       </section>
       <section className="list-group container">
-        <div className="ProductosLista">
+        <div className="lstProducto">
           {productosFiltrados.map((producto) => (
             <ProductoAdm key={producto.id} producto={producto} />
           ))}

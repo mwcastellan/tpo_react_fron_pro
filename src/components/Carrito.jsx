@@ -2,6 +2,19 @@ import React, { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { GoTrash } from "react-icons/go";
+import styled from "styled-components";
+
+const BotonConfirmar = styled.button`
+  background-color: rgb(188, 149, 224);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: blueviolet;
+  }
+`;
 
 /* Carrito de Compras */
 const Carrito = () => {
@@ -89,8 +102,7 @@ const Carrito = () => {
                 )}
               </p>
             </h6>
-
-            <button className="btnBoton">Confirmar</button>
+            <BotonConfirmar>Confirmar</BotonConfirmar>
           </section>
         )}
       </div>

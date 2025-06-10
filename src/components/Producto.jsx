@@ -2,6 +2,19 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
+import styled from "styled-components";
+
+const BotonAgregar = styled.button`
+  background-color: rgb(188, 149, 224);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: blueviolet;
+  }
+`;
 
 /* Producto */
 const Producto = ({ producto }) => {
@@ -85,14 +98,14 @@ const Producto = ({ producto }) => {
           </button>
         </div>
         <div className="card-title row">
-          <button
-            className="col btnBoton"
+          <BotonAgregar
+            className="col"
             onClick={() => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}
           >
             Agregar
-          </button>
+          </BotonAgregar>
 
           <Link className="col" to={`/productos/${producto.id}`}>
             Ver más

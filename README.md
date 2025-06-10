@@ -12,8 +12,7 @@ Site: Veterinaria - Curso React Frontend
 npm create vite@latest (Si crea Proyecto). Selecciona React como framework y configura el proyecto.
 
 3. Ingresar al directorio e Instala las dependencias del proyecto
-npm install
-en package.json están declaradas todas las dependencias.
+npm install, en package.json están declaradas todas las dependencias.
 
 5. Inicia el servidor local para ver tu aplicación:
 npm run dev

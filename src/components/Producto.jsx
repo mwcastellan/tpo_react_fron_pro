@@ -104,9 +104,8 @@ const Producto = ({ producto }) => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}
           >
-            Agregar
+            🛒 Agregar
           </BotonAgregar>
-
           <Link className="col" to={`/productos/${producto.id}`}>
             Ver más
           </Link>

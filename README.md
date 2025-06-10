@@ -12,15 +12,14 @@ Site: Veterinaria - Curso React Frontend
 npm create vite@latest (Si crea Proyecto). Selecciona React como framework y configura el proyecto.
 
 3. Ingresar al directorio e Instala las dependencias del proyecto
-npm install
-npm install react-router-dom
+npm install, en package.json están declaradas todas las dependencias.
 
-4. Inicia el servidor local para ver tu aplicación:
+5. Inicia el servidor local para ver tu aplicación:
 npm run dev
 
-5. Ir a http://localhost:nnnn/ donde nnnn es el puerto asignado.
+6. Ir a http://localhost:nnnn/ donde nnnn es el puerto asignado.
 
-6. Usuario para Testing:
+7. Usuario para Testing:
 {   "email": "admin@tporeact.com",
     "password": "admin123",
     "role": "admin",

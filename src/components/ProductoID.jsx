@@ -4,6 +4,7 @@ import Footer from "./estaticos/Footer";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
+import loading from "../assets/loading.gif";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
 
 /* Producto por ID */
@@ -64,7 +65,7 @@ const ProductoID = () => {
           </div>
         </article>
       ) : (
-        <p>Buscando...</p>
+        <img src={loading} alt="loading" />
       )}
       <Footer />
     </>

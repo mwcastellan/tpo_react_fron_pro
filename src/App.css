@@ -15,8 +15,8 @@
   margin-right: 20px;
 }
 .Healink:hover {
-  color: turquoise;
-  font-weight: bold;
+  color: rgb(25, 81, 76);
+ /* font-weight: bold;*/
 }
 /* CARRITO */
 .cart-btn-cart {

@@ -72,7 +72,7 @@ const Producto = ({ producto }) => {
           }}
         >
           <button
-            className="btn btn-outline-warning px-2 py-0 rounded"
+            className="btn btn-outline-primary px-2 py-0 rounded"
             onClick={decrease}
             style={{
               border: "none",
@@ -85,7 +85,7 @@ const Producto = ({ producto }) => {
           </button>
           <h6>{cantidad}</h6>
           <button
-            className="btn btn-outline-warning px-2 py-0 rounded"
+            className="btn btn-outline-primary px-2 py-0 rounded"
             onClick={increase}
             style={{
               border: "none",
@@ -104,7 +104,6 @@ const Producto = ({ producto }) => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}
             aria-label="Agregar al carrito"
-           
           >
             🛒 Agregar
           </BotonAgregar>

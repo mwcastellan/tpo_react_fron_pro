@@ -103,6 +103,8 @@ const Producto = ({ producto }) => {
             onClick={() => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}
+            aria-label="Agregar al carrito"
+           
           >
             🛒 Agregar
           </BotonAgregar>

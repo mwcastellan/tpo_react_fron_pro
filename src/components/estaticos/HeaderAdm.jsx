@@ -4,7 +4,7 @@ import { AutorizarContext } from "../../context/AutorizarContext";
 import Logo from "../../assets/react.svg";
 /* HeaderAdm */
 const HeaderAdm = () => {
-  const { isAutorizado, setIsAutorizado, usuario } =
+  const { isAutorizado, setIsAutorizado, usuario, cloSession } =
     useContext(AutorizarContext);
   return (
     <header>
@@ -45,13 +45,7 @@ const HeaderAdm = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <Link
-                  className="link  Healink"
-                  onClick={() => {
-                    setIsAutorizado(false);
-                    localStorage.removeItem("autorizadoToken");
-                  }}
-                >
+                <Link className="link  Healink" onClick={cloSession}>
                   Cerrar Sesión
                 </Link>
               </li>

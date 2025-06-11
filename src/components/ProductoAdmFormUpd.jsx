@@ -5,6 +5,10 @@ function ProductoAdmFormUpd({ seleccionado }) {
     useContext(AdministrarContext);
   const [producto, setProducto] = useState(seleccionado);
 
+  useEffect(() => {
+    setProducto(seleccionado);
+  }, [seleccionado]);
+
   const handleSubmitUpd = (e) => {
     setActProducto(false);
     e.preventDefault();

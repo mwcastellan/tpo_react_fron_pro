@@ -5,6 +5,10 @@ function ProductoAdmFormDlt({ seleccionado }) {
   const { dltProducto, setOpenDlt, setActProducto } =
     useContext(AdministrarContext);
 
+  useEffect(() => {
+    setProducto(seleccionado);
+  }, [seleccionado]);
+
   const handleSubmitDlt = (e) => {
     setActProducto(false);
     e.preventDefault();

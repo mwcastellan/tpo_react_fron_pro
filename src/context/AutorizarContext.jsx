@@ -72,6 +72,11 @@ export const AutorizarProvider = ({ children }) => {
     }
   };
 
+  const cloSession = () => {
+    setIsAutorizado(false);
+    localStorage.removeItem("autorizadoToken");
+  };
+
   return (
     <AutorizarContext.Provider
       value={{
@@ -86,6 +91,7 @@ export const AutorizarProvider = ({ children }) => {
         errors,
         setErrors,
         handleEnviar,
+        cloSession,
       }}
     >
       {children}

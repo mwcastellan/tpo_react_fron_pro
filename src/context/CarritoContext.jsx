@@ -36,11 +36,19 @@ export const CarritoProvider = ({ children }) => {
   }, []);
 
   /* Filtrar productos en la visualizacion */
-  const [filtro, setFiltro] = useState("");
-  const productosFiltrados = productos.filter((producto) =>
-    producto.nombre.toLowerCase().includes(filtro.toLowerCase())
+  const [filtroNombre, setFiltroNombre] = useState("");
+  const [filtroCategoria, setFiltroCategoria] = useState("");
+  /* const productosFiltrados = productos.filter((producto) =>
+    producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) );*/
+
+  const productosFiltrados = productos.filter(
+    (producto) =>
+      producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) &&
+      producto.categoria.toLowerCase().includes(filtroCategoria.toLowerCase())
   );
-  const [mostrarInput, setMostrarInput] = useState(false);
+
+  const [mostrarInputNombre, setMostrarInputNombre] = useState(false);
+  const [mostrarInputCategoria, setMostrarInputCategoria] = useState(false);
 
   const handleAddToCarrito = (producto) => {
     const productoExist = carrito.find((item) => item.id === producto.id);
@@ -91,10 +99,14 @@ export const CarritoProvider = ({ children }) => {
       value={{
         carrito,
         productos,
-        filtro,
-        setFiltro,
-        mostrarInput,
-        setMostrarInput,
+        filtroNombre,
+        setFiltroNombre,
+        filtroCategoria,
+        setFiltroCategoria,
+        mostrarInputNombre,
+        mostrarInputCategoria,
+        setMostrarInputNombre,
+        setMostrarInputCategoria,
         productosFiltrados,
         cargandoProductos,
         error,

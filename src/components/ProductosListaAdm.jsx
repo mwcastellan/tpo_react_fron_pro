@@ -6,11 +6,11 @@ import { AdministrarContext } from "../context/AdministrarContext";
 /* Lista de Productos Administrar */
 const ProductosListaAdm = () => {
   const {
-    filtro,
-    setFiltro,
+    filtroNombre,
+    setFiltroNombre,
     productosFiltrados,
-    mostrarInput,
-    setMostrarInput,
+    mostrarInputNombre,
+    setMostrarInputNombre,
     setOpenAdd,
     openAdd,
   } = useContext(AdministrarContext);
@@ -24,10 +24,7 @@ const ProductosListaAdm = () => {
               <h4>Administración de productos:</h4>
             </div>
             <div className="col">
-              <button
-                className="btnBoton"
-                onClick={() => setOpenAdd(true)}
-              >
+              <button className="btnBoton" onClick={() => setOpenAdd(true)}>
                 Agregar Producto
               </button>
               {openAdd && <ProductoAdmFormAdd />}
@@ -36,17 +33,19 @@ const ProductosListaAdm = () => {
             <div className="col">
               <button
                 className="accordion-button collapsed"
-                onClick={() => setMostrarInput(!mostrarInput)}
+                onClick={() => setMostrarInputNombre(!mostrarInputNombre)}
               >
-                {mostrarInput ? "Filtrar por Nombre ▲" : "Filtrar por Nombre ▼"}
+                {mostrarInputNombre
+                  ? "Filtrar por Nombre ▲"
+                  : "Filtrar por Nombre ▼"}
               </button>
-              {mostrarInput && (
+              {mostrarInputNombre && (
                 <section>
                   <input
                     type="text"
                     className="form-control"
-                    value={filtro}
-                    onChange={(e) => setFiltro(e.target.value)}
+                    value={filtroNombre}
+                    onChange={(e) => setFiltroNombre(e.target.value)}
                   />
                 </section>
               )}

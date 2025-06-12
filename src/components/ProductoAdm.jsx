@@ -21,7 +21,7 @@ const ProductoAdm = ({ producto }) => {
       className="card border-dark"
       style={{
         maxWidth: "600px",
-        margin: "10px 10px",
+        margin: "5px 5px",
         padding: "1rem",
         border: "1px solid #eee",
         borderRadius: "15px",

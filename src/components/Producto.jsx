@@ -4,7 +4,7 @@ import { CarritoContext } from "../context/CarritoContext";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
 import styled from "styled-components";
 
-const BotonAgregar = styled.button`
+const BotonGral = styled.button`
   background-color: rgb(188, 149, 224);
   color: white;
   padding: 10px 15px;
@@ -29,8 +29,8 @@ const Producto = ({ producto }) => {
       className="card border-dark"
       style={{
         maxWidth: "600px",
-        margin: "10px 10px",
-        padding: "1rem",
+        margin: "5px 5px",
+        padding: "0.rem",
         border: "1px solid #eee",
         borderRadius: "15px",
         boxShadow: "0 2px 8px  #6f42c1",
@@ -98,18 +98,20 @@ const Producto = ({ producto }) => {
           </button>
         </div>
         <div className="card-title row">
-          <BotonAgregar
-            className="col"
+          <BotonGral
+            className="col btnBoton"
             onClick={() => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}
             aria-label="Agregar al carrito"
           >
             🛒 Agregar
-          </BotonAgregar>
-          <Link className="col" to={`/productos/${producto.id}`}>
-            Ver más
-          </Link>
+          </BotonGral>
+          <BotonGral className="col btnBoton">
+            <Link className="" to={`/productos/${producto.id}`}>
+              Ver más
+            </Link>
+          </BotonGral>
         </div>
       </div>
     </article>

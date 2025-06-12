@@ -7,10 +7,14 @@ const ProductosLista = () => {
   const {
     productos,
     productosFiltrados,
-    filtro,
-    setFiltro,
-    mostrarInput,
-    setMostrarInput,
+    filtroNombre,
+    setFiltroNombre,
+    filtroCategoria,
+    setFiltroCategoria,
+    mostrarInputNombre,
+    mostrarInputCategoria,
+    setMostrarInputNombre,
+    setMostrarInputCategoria,
   } = useContext(CarritoContext);
   return (
     <>
@@ -20,20 +24,44 @@ const ProductosLista = () => {
             <div className="col">
               <h4>Galería de nuestros productos:</h4>
             </div>
+
             <div className="col">
               <button
                 className="accordion-button collapsed"
-                onClick={() => setMostrarInput(!mostrarInput)}
+                onClick={() => setMostrarInputNombre(!mostrarInputNombre)}
               >
-                {mostrarInput ? "Filtrar por Nombre ▲" : "Filtrar por Nombre ▼"}
+                {mostrarInputNombre
+                  ? "Filtrar por Nombre ▲"
+                  : "Filtrar por Nombre ▼"}
               </button>
-              {mostrarInput && (
+              {mostrarInputNombre && (
                 <section>
                   <input
                     type="text"
                     className="form-control"
-                    value={filtro}
-                    onChange={(e) => setFiltro(e.target.value)}
+                    value={filtroNombre}
+                    onChange={(e) => setFiltroNombre(e.target.value)}
+                  />
+                </section>
+              )}
+            </div>
+
+            <div className="col">
+              <button
+                className="accordion-button collapsed"
+                onClick={() => setMostrarInputCategoria(!mostrarInputCategoria)}
+              >
+                {mostrarInputCategoria
+                  ? "Filtrar por Categoria ▲"
+                  : "Filtrar por Categoria ▼"}
+              </button>
+              {mostrarInputCategoria && (
+                <section>
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={filtroCategoria}
+                    onChange={(e) => setFiltroCategoria(e.target.value)}
                   />
                 </section>
               )}

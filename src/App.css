@@ -16,7 +16,7 @@
 }
 .Healink:hover {
   color: rgb(25, 81, 76);
- /* font-weight: bold;*/
+  /* font-weight: bold;*/
 }
 /* CARRITO */
 .cart-btn-cart {
@@ -76,7 +76,7 @@
   color: white;
   display: block;
   text-align: center;
-  margin: 10px 10px auto;
+  margin: 10px 10px 10px 10px;
   padding: 10px;
   font-size: 15px;
 }
@@ -84,6 +84,11 @@
 .heaProducto {
   background-color: rgb(188, 149, 224);
   text-align: center;
+  margin: 10px 10px;
+  padding: 0rem;
+
+  border-radius: 15px;
+  box-shadow: 0 2px 8px #6f42c1;
 }
 /* Linea encabezado de productos */
 .lstProducto_Filtro {

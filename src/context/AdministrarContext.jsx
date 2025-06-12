@@ -39,11 +39,11 @@ export const AdministrarProvider = ({ children }) => {
   }, []);
 
   /* Filtrar productos en la visualizacion */
-  const [filtro, setFiltro] = useState("");
+  const [filtroNombre, setFiltroNombre] = useState("");
   const productosFiltrados = productos.filter((producto) =>
-    producto.nombre.toLowerCase().includes(filtro.toLowerCase())
+    producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase())
   );
-  const [mostrarInput, setMostrarInput] = useState(false);
+  const [mostrarInputNombre, setMostrarInputNombre] = useState(false);
 
 
   /* Cargar Productos eventual */
@@ -154,11 +154,11 @@ export const AdministrarProvider = ({ children }) => {
         setProductos,
         seleccionado,
         setSeleccionado,
-        filtro,
-        setFiltro,
+        filtroNombre,
+        setFiltroNombre,
         productosFiltrados,
-        mostrarInput,
-        setMostrarInput,
+        mostrarInputNombre,
+        setMostrarInputNombre,
         addProducto,
         updProducto,
         dltProducto,

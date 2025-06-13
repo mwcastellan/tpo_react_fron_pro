@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Producto from "./Producto";
 import { CarritoContext } from "../context/CarritoContext";
 
@@ -18,17 +18,32 @@ const ProductosLista = () => {
   } = useContext(CarritoContext);
 
   /* Paginacion */
-
+  const productosPorPagina = 8;
   const [currentPagina, setCurrentPagina] = useState(1);
-  const productosPorPagina = 4;
-  /* Calcular los productos en la página actual */
+  /* Si cambia productosFiltrados, resetea la paginación cuando cambian los productos*/
+  useEffect(() => {
+    setCurrentPagina(1);
+  }, [productosFiltrados]);
+  /* Variables de paginación que se recalculan automáticamente con los cambios en productos o paginaActual */
+  const totalPaginas = Math.ceil(
+    productosFiltrados.length / productosPorPagina
+  );
   const indexOfLastProducto = currentPagina * productosPorPagina;
   const indexOfFirstProducto = indexOfLastProducto - productosPorPagina;
   const currentProductos = productosFiltrados.slice(
     indexOfFirstProducto,
     indexOfLastProducto
   );
-  /*            */
+
+  const cambiarPagina = (direccion) => {
+    if (direccion === "prev" && currentPagina > 1) {
+      setCurrentPagina(currentPagina - 1);
+    }
+    if (direccion === "next" && currentPagina < totalPaginas) {
+      setCurrentPagina(currentPagina + 1);
+    }
+  };
+
   return (
     <>
       <section className="lstProducto_Filtro">
@@ -91,24 +106,26 @@ const ProductosLista = () => {
         </div>
       </section>
 
-      <section className="d-flex justify-content-center ">
-        <button
-          className="btnBoton"
-          variant="primary"
-          disabled={currentPagina === 1}
-          onClick={() => setCurrentPagina(currentPagina - 1)}
-        >
-          Anterior
-        </button>
-        <span className="mx-3">Página {currentPagina} </span>
-        <button
-          className="btnBoton"
-          variant="primary"
-          disabled={indexOfLastProducto >= productos.length}
-          onClick={() => setCurrentPagina(currentPagina + 1)}
-        >
-          Siguiente
-        </button>
+      <section>
+        <nav className="mt-3 d-flex justify-content-center align-items-center">
+          <button
+            className="btn-primary me-2 btnBoton"
+            onClick={() => cambiarPagina("prev")}
+            disabled={currentPagina === 1}
+          >
+            −
+          </button>
+          <span className="fw-bold">
+            Página {currentPagina} de {totalPaginas}
+          </span>
+          <button
+            className="btn-primary ms-2 btnBoton"
+            onClick={() => cambiarPagina("next")}
+            disabled={currentPagina === totalPaginas}
+          >
+            +
+          </button>
+        </nav>
       </section>
 
       <section className="list-group">

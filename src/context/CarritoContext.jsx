@@ -40,7 +40,6 @@ export const CarritoProvider = ({ children }) => {
   const [filtroCategoria, setFiltroCategoria] = useState("");
   /* const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) );*/
-
   const productosFiltrados = productos.filter(
     (producto) =>
       producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) &&

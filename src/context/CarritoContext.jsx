@@ -17,6 +17,7 @@ export const CarritoProvider = ({ children }) => {
   /* isCarritoOpen - Señal carrito abierto */
   const [isCarritoOpen, setCarritoOpen] = useState(false);
 
+  /* API para Galeria de productos */
   useEffect(() => {
     fetch(
       "https://681823705a4b07b9d1ce05b2.mockapi.io/tpo-react-fron/productos"
@@ -40,18 +41,18 @@ export const CarritoProvider = ({ children }) => {
   const [filtroCategoria, setFiltroCategoria] = useState("");
   /* const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) );*/
+  /* Por Nombre y/o Categoria */
   const productosFiltrados = productos.filter(
     (producto) =>
       producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) &&
       producto.categoria.toLowerCase().includes(filtroCategoria.toLowerCase())
   );
-
   const [mostrarInputNombre, setMostrarInputNombre] = useState(false);
   const [mostrarInputCategoria, setMostrarInputCategoria] = useState(false);
 
+  /* Adicioinar al Carrito */
   const handleAddToCarrito = (producto) => {
     const productoExist = carrito.find((item) => item.id === producto.id);
-
     if (productoExist) {
       toast.success(
         `El producto ${producto.nombre} se ha actualizado en el carrito`
@@ -74,7 +75,7 @@ export const CarritoProvider = ({ children }) => {
       setCarrito([...carrito, producto]);
     }
   };
-
+  /* Eliminar del Carrito */
   const handleDeleteFromCarrito = (producto) => {
     setCarrito((preVCart) => {
       return preVCart

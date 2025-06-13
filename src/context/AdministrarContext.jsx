@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-/* Variables y Procedimiento globales para Administrar */
+/* Variables y Procedimiento globales para Administrar los Productos */
 export const AdministrarContext = createContext();
 
 export const AdministrarProvider = ({ children }) => {
@@ -44,7 +44,6 @@ export const AdministrarProvider = ({ children }) => {
     producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase())
   );
   const [mostrarInputNombre, setMostrarInputNombre] = useState(false);
-
 
   /* Cargar Productos eventual */
   const loadProductos = async () => {
@@ -142,7 +141,6 @@ export const AdministrarProvider = ({ children }) => {
       nuevosErrores.categoria =
         "La categoría debe tener al menos 5 caracteres.";
     }
-
     setErrores(nuevosErrores);
     return Object.keys(nuevosErrores).length === 0;
   };

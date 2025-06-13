@@ -28,6 +28,7 @@ export const AutorizarProvider = ({ children }) => {
     }
   }, []);
 
+  /* Validad Ingreso */
   const handleEnviar = async (e) => {
     e.preventDefault();
     let validationErrors = {};
@@ -50,6 +51,7 @@ export const AutorizarProvider = ({ children }) => {
       if (!foundUsuario) {
         setErrors({ email: "Las credenciales son inválidas" });
       } else {
+        /* Solamente rolo admin */
         if (foundUsuario.role === "admin") {
           setIsAutorizado(true);
           setUsuario(foundUsuario.email);

@@ -16,6 +16,19 @@ const ProductosLista = () => {
     setMostrarInputNombre,
     setMostrarInputCategoria,
   } = useContext(CarritoContext);
+
+  /* Paginacion */
+
+  const [currentPagina, setCurrentPagina] = useState(1);
+  const productosPorPagina = 4;
+  /* Calcular los productos en la página actual */
+  const indexOfLastProducto = currentPagina * productosPorPagina;
+  const indexOfFirstProducto = indexOfLastProducto - productosPorPagina;
+  const currentProductos = productosFiltrados.slice(
+    indexOfFirstProducto,
+    indexOfLastProducto
+  );
+  /*            */
   return (
     <>
       <section className="lstProducto_Filtro">
@@ -72,17 +85,37 @@ const ProductosLista = () => {
 
       <section className="list-group container">
         <div className="lstProducto">
-          {productosFiltrados.map((producto) => (
+          {currentProductos.map((producto) => (
             <Producto key={producto.id} producto={producto} />
           ))}
         </div>
+      </section>
+
+      <section className="d-flex justify-content-center ">
+        <button
+          className="btnBoton"
+          variant="primary"
+          disabled={currentPagina === 1}
+          onClick={() => setCurrentPagina(currentPagina - 1)}
+        >
+          Anterior
+        </button>
+        <span className="mx-3">Página {currentPagina} </span>
+        <button
+          className="btnBoton"
+          variant="primary"
+          disabled={indexOfLastProducto >= productos.length}
+          onClick={() => setCurrentPagina(currentPagina + 1)}
+        >
+          Siguiente
+        </button>
       </section>
 
       <section className="list-group">
         <div
           className="row"
           style={{
-            margin: "10px 10px",
+            margin: "20px 20px",
             padding: "0rem",
           }}
         >

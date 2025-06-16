@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
-import { BotonGeneral } from "./estaticos/Estilos";
+import { BotonGeneral, BotonSigno } from "./estaticos/Estilos";
 
 /* Producto */
 const Producto = ({ producto }) => {
@@ -59,35 +59,17 @@ const Producto = ({ producto }) => {
             marginBottom: "2px",
           }}
         >
-          <button
-            className="btn btn-outline-primary px-2 py-0 rounded"
-            onClick={decrease}
-            style={{
-              border: "none",
-              padding: "4px 8px",
-              borderRadius: "4px",
-              cursor: "pointer",
-            }}
-          >
+          <BotonSigno  onClick={decrease}>
             -
-          </button>
+          </BotonSigno>
           <h6>{cantidad}</h6>
-          <button
-            className="btn btn-outline-primary px-2 py-0 rounded"
-            onClick={increase}
-            style={{
-              border: "none",
-              padding: "4px 8px",
-              borderRadius: "4px",
-              cursor: "pointer",
-            }}
-          >
+          <BotonSigno  onClick={increase}>
             +
-          </button>
+          </BotonSigno>
         </div>
         <div className="card-title row">
           <BotonGeneral
-            className="col btnBoton"
+            className="col"
             onClick={() => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
             }}
@@ -95,7 +77,7 @@ const Producto = ({ producto }) => {
           >
             🛒 Agregar
           </BotonGeneral>
-          <BotonGeneral className="col btnBoton">
+          <BotonGeneral className="col">
             <Link className="" to={`/productos/${producto.id}`}>
               Ver más
             </Link>

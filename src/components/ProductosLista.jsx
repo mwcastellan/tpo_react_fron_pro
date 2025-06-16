@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import Producto from "./Producto";
 import { CarritoContext } from "../context/CarritoContext";
+import { BotonSigno } from "./estaticos/Estilos";
 
 /* Lista de Productos */
 const ProductosLista = () => {
@@ -108,23 +109,21 @@ const ProductosLista = () => {
 
       <section>
         <nav className="mt-3 d-flex justify-content-center align-items-center">
-          <button
-            className="btn btn-outline-primary px-2 py-0 rounded"
+          <BotonSigno
             onClick={() => cambiarPagina("prev")}
             disabled={currentPagina === 1}
           >
             −
-          </button>
+          </BotonSigno>
           <span className="fw-bold">
             Página {currentPagina} de {totalPaginas}
           </span>
-          <button
-            className="btn btn-outline-primary px-2 py-0 rounded"
+          <BotonSigno
             onClick={() => cambiarPagina("next")}
             disabled={currentPagina === totalPaginas}
           >
             +
-          </button>
+          </BotonSigno>
         </nav>
       </section>
 

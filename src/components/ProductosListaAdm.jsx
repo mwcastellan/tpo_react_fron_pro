@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import ProductoAdm from "./ProductoAdm";
 import ProductoAdmFormAdd from "./ProductoAdmFormAdd";
 import { AdministrarContext } from "../context/AdministrarContext";
+import { BotonGeneral } from "./estaticos/Estilos";
 
 /* Lista de Productos Administrar */
 const ProductosListaAdm = () => {
@@ -24,9 +25,9 @@ const ProductosListaAdm = () => {
               <h4>Administración de productos:</h4>
             </div>
             <div className="col">
-              <button className="btnBoton" onClick={() => setOpenAdd(true)}>
+              <BotonGeneral onClick={() => setOpenAdd(true)}>
                 Agregar Producto
-              </button>
+              </BotonGeneral>
               {openAdd && <ProductoAdmFormAdd />}
             </div>
 

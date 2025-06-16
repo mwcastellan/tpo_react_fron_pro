@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AdministrarContext } from "../context/AdministrarContext";
+import { BotonGeneral } from "./estaticos/Estilos";
 function ProductoAdmFormDlt({ seleccionado }) {
   const [producto, setProducto] = useState(seleccionado);
   const { dltProducto, setOpenDlt, setActProducto } =
@@ -44,18 +45,18 @@ function ProductoAdmFormDlt({ seleccionado }) {
             <h6 className="card-title">Precio: ${producto.precio}</h6>
             <h6 className="card-title">Disponible: {producto.disponible}</h6>
             <div className="card-title row">
-              <button className="col btnBoton" type="submit">
+              <BotonGeneral className="col" type="submit">
                 Eliminar
-              </button>
-              <button
-                className="col btnBoton"
+              </BotonGeneral>
+              <BotonGeneral
+                className="col"
                 onClick={() => {
                   setOpenDlt(false);
                   setActProducto(false);
                 }}
               >
                 Cerrar
-              </button>
+              </BotonGeneral>
             </div>
           </div>
         </form>

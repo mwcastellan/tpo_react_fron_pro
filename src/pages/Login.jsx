@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import HeaderAdm from "../components/estaticos/HeaderAdm";
 import { useAutorizar } from "../context/AutorizarContext";
 import FooterAdm from "../components/estaticos/FooterAdm";
+import { BotonGeneral } from "../components/estaticos/Estilos";
 
 /* Login */
 const Login = () => {
@@ -45,9 +46,9 @@ const Login = () => {
               {errors.password && <div>{errors.password}</div>}
             </small>
             <br />
-            <button type="submit" className="col btnBoton">
+            <BotonGeneral type="submit" className="col">
               Enviar
-            </button>
+            </BotonGeneral>
           </form>
         </section>
       </section>

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 import loading from "../assets/loading.gif";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
+import { BotonGeneral } from "./estaticos/Estilos";
 
 /* Producto por ID */
 const ProductoID = () => {
@@ -59,9 +60,7 @@ const ProductoID = () => {
               Descripcion2: {producto.descripcion2}
             </h6>
 
-            <button className="btnBoton" onClick={() => navigate(-1)}>
-              Volver
-            </button>
+            <BotonGeneral onClick={() => navigate(-1)}>Volver</BotonGeneral>
           </div>
         </article>
       ) : (

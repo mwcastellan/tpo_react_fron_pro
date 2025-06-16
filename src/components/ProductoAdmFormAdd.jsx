@@ -1,5 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AdministrarContext } from "../context/AdministrarContext";
+import { BotonGeneral } from "./estaticos/Estilos";
+
 function ProductoAdmFormAdd() {
   const { addProducto, setOpenAdd, errores, checkProducto, setActProducto } =
     useContext(AdministrarContext);
@@ -161,18 +163,18 @@ function ProductoAdmFormAdd() {
             )}
 
             <div className="card-title row">
-              <button className="col btnBoton" type="submit">
+              <BotonGeneral className="col" type="submit">
                 Agregar
-              </button>
-              <button
-                className="col btnBoton"
+              </BotonGeneral>
+              <BotonGeneral
+                className="col"
                 onClick={() => {
                   setOpenAdd(false);
                   setActProducto(false);
                 }}
               >
                 Cerrar
-              </button>
+              </BotonGeneral>
             </div>
           </div>
         </form>

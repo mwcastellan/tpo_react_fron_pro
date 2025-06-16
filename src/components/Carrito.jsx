@@ -2,19 +2,7 @@ import React, { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { FaRegTrashCan } from "react-icons/fa6";
-import styled from "styled-components";
-
-const BotonConfirmar = styled.button`
-  background-color: rgb(188, 149, 224);
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: blueviolet;
-  }
-`;
+import { BotonGeneral } from "./estaticos/Estilos";
 
 /* Carrito de Compras */
 const Carrito = () => {
@@ -102,9 +90,9 @@ const Carrito = () => {
                 )}
               </p>
             </h6>
-            <BotonConfirmar aria-label="Confirmar su compra">
+            <BotonGeneral aria-label="Confirmar su compra">
               Confirmar
-            </BotonConfirmar>
+            </BotonGeneral>
           </section>
         )}
       </div>

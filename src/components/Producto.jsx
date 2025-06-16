@@ -2,19 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
-import styled from "styled-components";
-
-const BotonGral = styled.button`
-  background-color: rgb(188, 149, 224);
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: blueviolet;
-  }
-`;
+import { BotonGeneral } from "./estaticos/Estilos";
 
 /* Producto */
 const Producto = ({ producto }) => {
@@ -98,7 +86,7 @@ const Producto = ({ producto }) => {
           </button>
         </div>
         <div className="card-title row">
-          <BotonGral
+          <BotonGeneral
             className="col btnBoton"
             onClick={() => {
               handleAddToCarrito({ ...producto, cantidad: cantidad });
@@ -106,12 +94,12 @@ const Producto = ({ producto }) => {
             aria-label="Agregar al carrito"
           >
             🛒 Agregar
-          </BotonGral>
-          <BotonGral className="col btnBoton">
+          </BotonGeneral>
+          <BotonGeneral className="col btnBoton">
             <Link className="" to={`/productos/${producto.id}`}>
               Ver más
             </Link>
-          </BotonGral>
+          </BotonGeneral>
         </div>
       </div>
     </article>

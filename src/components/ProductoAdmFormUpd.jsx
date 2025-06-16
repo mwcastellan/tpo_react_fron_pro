@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AdministrarContext } from "../context/AdministrarContext";
+import { BotonGeneral } from "./estaticos/Estilos";
 function ProductoAdmFormUpd({ seleccionado }) {
   const { updProducto, setOpenUpd, errores, checkProducto, setActProducto } =
     useContext(AdministrarContext);
@@ -147,18 +148,18 @@ function ProductoAdmFormUpd({ seleccionado }) {
               <p style={{ color: "red" }}>{errores.categoria}</p>
             )}
             <div className="card-title row">
-              <button className="col btnBoton" type="submit">
+              <BotonGeneral className="col" type="submit">
                 Modificar
-              </button>
-              <button
-                className="col btnBoton"
+              </BotonGeneral>
+              <BotonGeneral
+                className="col"
                 onClick={() => {
                   setOpenUpd(false);
                   setActProducto(false);
                 }}
               >
                 Cerrar
-              </button>
+              </BotonGeneral>
             </div>
           </div>
         </form>

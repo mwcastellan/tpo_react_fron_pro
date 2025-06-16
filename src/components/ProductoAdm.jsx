@@ -4,6 +4,7 @@ import imagenerr from "../assets/404-error-3060993_1280.webp";
 import { AdministrarContext } from "../context/AdministrarContext";
 import ProductoAdmFormUpd from "./ProductoAdmFormUpd";
 import ProductoAdmFormDlt from "./ProductoAdmFormDlt";
+import { BotonGeneral } from "./estaticos/Estilos";
 
 /* ProductoAdm */
 const ProductoAdm = ({ producto }) => {
@@ -58,24 +59,24 @@ const ProductoAdm = ({ producto }) => {
           <img src={imagenerr} width="15%" height="15%" />
         )}
         <div className="card-title row">
-          <button
-            className="col btnBoton"
+          <BotonGeneral
+            className="col"
             onClick={() => {
               setOpenUpd(true);
               setSeleccionado(producto);
             }}
           >
             Modificar
-          </button>
-          <button
-            className="col btnBoton"
+          </BotonGeneral>
+          <BotonGeneral
+            className="col"
             onClick={() => {
               setOpenDlt(true);
               setSeleccionado(producto);
             }}
           >
             Eliminar
-          </button>
+          </BotonGeneral>
         </div>
         {openUpd && <ProductoAdmFormUpd seleccionado={seleccionado} />}
         {openDlt && <ProductoAdmFormDlt seleccionado={seleccionado} />}

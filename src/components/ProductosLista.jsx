@@ -109,7 +109,7 @@ const ProductosLista = () => {
       <section>
         <nav className="mt-3 d-flex justify-content-center align-items-center">
           <button
-            className="btn-primary me-2 btnBoton"
+            className="btn btn-outline-primary px-2 py-0 rounded"
             onClick={() => cambiarPagina("prev")}
             disabled={currentPagina === 1}
           >
@@ -119,7 +119,7 @@ const ProductosLista = () => {
             Página {currentPagina} de {totalPaginas}
           </span>
           <button
-            className="btn-primary ms-2 btnBoton"
+            className="btn btn-outline-primary px-2 py-0 rounded"
             onClick={() => cambiarPagina("next")}
             disabled={currentPagina === totalPaginas}
           >

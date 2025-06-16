@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
+import { BotonGeneral } from "../components/estaticos/Estilos";
 
 /* Contacto */
 const Contacto = () => {
@@ -138,9 +139,7 @@ const Contacto = () => {
             <br />
           </div>
           <div>
-            <button type="submit" className="btnBoton">
-              Enviar
-            </button>
+            <BotonGeneral type="submit">Enviar</BotonGeneral>
           </div>
         </form>
 
@@ -199,9 +198,7 @@ const Contacto = () => {
             <br />
           </div>
           <div>
-            <button type="submit" className="btnBoton">
-              Enviar
-            </button>
+            <BotonGeneral type="submit">Enviar</BotonGeneral>
           </div>
         </form>
       </section>

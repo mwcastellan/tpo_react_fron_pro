@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 import { RiCloseLargeFill } from "react-icons/ri";
-import { GoTrash } from "react-icons/go";
+import { FaRegTrashCan } from "react-icons/fa6";
 import styled from "styled-components";
 
 const BotonConfirmar = styled.button`
@@ -86,7 +86,7 @@ const Carrito = () => {
                       className="cart-btn-trash"
                       onClick={() => handleDeleteFromCarrito(item)}
                     >
-                      <GoTrash color="black" />
+                      <FaRegTrashCan color="black" aria-label="Eliminar" />
                     </button>
                   </article>
                 </li>
@@ -102,7 +102,9 @@ const Carrito = () => {
                 )}
               </p>
             </h6>
-            <BotonConfirmar>Confirmar</BotonConfirmar>
+            <BotonConfirmar aria-label="Confirmar su compra">
+              Confirmar
+            </BotonConfirmar>
           </section>
         )}
       </div>

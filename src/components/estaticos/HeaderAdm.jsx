@@ -4,7 +4,7 @@ import { AutorizarContext } from "../../context/AutorizarContext";
 import Logo from "../../assets/react.svg";
 /* HeaderAdm */
 const HeaderAdm = () => {
-  const { isAutorizado, setIsAutorizado, usuario, cloSession } =
+  const { isAutorizado, setIsAutorizado, usuario, cloSession, serverName } =
     useContext(AutorizarContext);
   return (
     <header>
@@ -53,6 +53,13 @@ const HeaderAdm = () => {
                 <Link className="link Healink">
                   {isAutorizado
                     ? "Bienvenido usuario autenticado: " + usuario
+                    : ""}
+                </Link>
+              </li>
+               <li className="nav-item">
+                <Link className="link Healink">
+                   {isAutorizado
+                    ? "Servidor: " + serverName
                     : ""}
                 </Link>
               </li>

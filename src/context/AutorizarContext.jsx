@@ -20,6 +20,8 @@ export const AutorizarProvider = ({ children }) => {
 
   /* Token */
   const token = `fake-token-${usuario}`;
+  /* Nombre Servidor */
+  const serverName = window.location.hostname;
 
   useEffect(() => {
     if (isAutorizado) {
@@ -94,6 +96,7 @@ export const AutorizarProvider = ({ children }) => {
         setErrors,
         handleEnviar,
         cloSession,
+        serverName,
       }}
     >
       {children}

@@ -1,7 +1,12 @@
 import React from "react";
+import {Carousel} from "react-bootstrap"
 import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
 import carrusel1 from "../assets/carrusel1.png";
+import carrusel2 from "../assets/carrusel2.png";
+import carrusel3 from "../assets/carrusel3.png";
+import carrusel4 from "../assets/carrusel4.png";
+import carrusel5 from "../assets/carrusel5.png";
 
 /* Inicio */
 const Inicio = () => {
@@ -10,8 +15,44 @@ const Inicio = () => {
       <Header />
       <div className="container Inicio-container-grid  p-4 border rounded shadow">
         <main className="Inicio-main card border-secondary mb-3">
-          <div className="imagenCarrusel">
-            <img className="img-carrusel1" src={carrusel1} />
+          <div className="aaaaaimagenCarrusel">
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carrusel1}
+                  alt="Primera imagen"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carrusel2}
+                  alt="Segunda imagen"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carrusel3}
+                  alt="Tercera imagen"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carrusel4}
+                  alt="Cuarta imagen"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={carrusel5}
+                  alt="Quinta imagen"
+                />
+              </Carousel.Item>
+            </Carousel>
           </div>
         </main>
         <aside className="Inicio-aside card border-secondary mb-3">

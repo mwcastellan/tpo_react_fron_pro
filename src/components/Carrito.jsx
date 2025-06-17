@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Carousel } from "react-bootstrap";
 import { CarritoContext } from "../context/CarritoContext";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { FaRegTrashCan } from "react-icons/fa6";
@@ -51,21 +52,47 @@ const Carrito = () => {
                         Cantidad: {item.cantidad} - Total $
                         {item.cantidad * item.precio}
                       </p>
-
-                      {item.imagen ? (
-                        <img
-                          src={item.imagen}
-                          style={{
-                            width: "40%",
-                            maxHeight: "300px",
-                            objectFit: "cover",
-                            borderRadius: "8px",
-                            marginBottom: "0.5rem",
-                          }}
-                          onError={(e) => {
-                            e.target.src = imagenerr;
-                          }}
-                        />
+                      {item.imagen1 ? (
+                        <div>
+                          <Carousel>
+                            <Carousel.Item>
+                              <img
+                                className="d-block imgProducto"
+                                src={item.imagen1}
+                                onError={(e) => {
+                                  e.target.src = imagenerr;
+                                }}
+                              />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                              <img
+                                className="d-block  imgProducto"
+                                src={item.imagen2}
+                                onError={(e) => {
+                                  e.target.src = imagenerr;
+                                }}
+                              />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                              <img
+                                className="d-block imgProducto"
+                                src={item.imagen3}
+                                onError={(e) => {
+                                  e.target.src = imagenerr;
+                                }}
+                              />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                              <img
+                                className="d-block imgProducto"
+                                src={item.imagen4}
+                                onError={(e) => {
+                                  e.target.src = imagenerr;
+                                }}
+                              />
+                            </Carousel.Item>
+                          </Carousel>
+                        </div>
                       ) : (
                         <img src={imagenerr} width="100%" height="100%" />
                       )}

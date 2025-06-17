@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
 import { AdministrarContext } from "../context/AdministrarContext";
@@ -41,22 +42,49 @@ const ProductoAdm = ({ producto }) => {
         <h6 className="card-title">Cantidad: {producto.cantidad}</h6>
         <h6 className="card-title">Descripción 1: {producto.descripcion1}</h6>
         <h6 className="card-title">Descripción 2: {producto.descripcion2}</h6>
-        {producto.imagen ? (
-          <img
-            src={producto.imagen}
-            style={{
-              width: "50%",
-              maxHeight: "300px",
-              objectFit: "cover",
-              borderRadius: "8px",
-              marginBottom: "0.5rem",
-            }}
-            onError={(e) => {
-              e.target.src = imagenerr;
-            }}
-          />
+        {producto.imagen1 ? (
+          <div>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen1}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen2}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen3}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen4}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+            </Carousel>
+          </div>
         ) : (
-          <img src={imagenerr} width="15%" height="15%" />
+          <img src={imagenerr} width="100%" height="100%" />
         )}
         <div className="card-title row">
           <BotonGeneral
@@ -77,12 +105,14 @@ const ProductoAdm = ({ producto }) => {
           >
             Eliminar
           </BotonGeneral>
+          <BotonGeneral className="col">
+            <Link className="" to={`/productos/${producto.id}`}>
+              Ver más
+            </Link>
+          </BotonGeneral>
         </div>
         {openUpd && <ProductoAdmFormUpd seleccionado={seleccionado} />}
         {openDlt && <ProductoAdmFormDlt seleccionado={seleccionado} />}
-        <Link className="" to={`/productos/${producto.id}`}>
-          Ver más
-        </Link>
       </div>
     </article>
   );

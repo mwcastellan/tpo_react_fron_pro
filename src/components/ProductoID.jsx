@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Carousel } from "react-bootstrap";
 import Header from "./estaticos/Header";
 import Footer from "./estaticos/Footer";
 import { useParams } from "react-router-dom";
@@ -39,17 +40,47 @@ const ProductoID = () => {
             <h6 className="card-title">Categoria: {producto.categoria}</h6>
             <h6 className="card-title">Precio: ${producto.precio}</h6>
             <h6 className="card-title">Disponible: {producto.disponible}</h6>
-            {producto.imagen ? (
-              <img
-                src={producto.imagen}
-                style={{
-                  width: "50%",
-                  maxHeight: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                  marginBottom: "0.5rem",
-                }}
-              />
+            {producto.imagen1 ? (
+              <div>
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      className="d-block imgProducto"
+                      src={producto.imagen1}
+                      onError={(e) => {
+                        e.target.src = imagenerr;
+                      }}
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block  imgProducto"
+                      src={producto.imagen2}
+                      onError={(e) => {
+                        e.target.src = imagenerr;
+                      }}
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block imgProducto"
+                      src={producto.imagen3}
+                      onError={(e) => {
+                        e.target.src = imagenerr;
+                      }}
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block imgProducto"
+                      src={producto.imagen4}
+                      onError={(e) => {
+                        e.target.src = imagenerr;
+                      }}
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
             ) : (
               <img src={imagenerr} width="25%" height="25%" />
             )}

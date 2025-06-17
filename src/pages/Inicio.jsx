@@ -15,7 +15,7 @@ const Inicio = () => {
       <Header />
       <div className="container Inicio-container-grid  p-4 border rounded shadow">
         <main className="Inicio-main card border-secondary mb-3">
-          <div className="aaaaaimagenCarrusel">
+          <div>
             <Carousel>
               <Carousel.Item>
                 <img

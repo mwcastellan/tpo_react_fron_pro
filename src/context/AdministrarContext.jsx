@@ -126,8 +126,17 @@ export const AdministrarProvider = ({ children }) => {
     if (!producto.disponible || producto.disponible <= 0) {
       nuevosErrores.disponible = "El disponible debe ser mayor a 0.";
     }
-    if (!producto.imagen.trim()) {
-      nuevosErrores.imagen = "Informe imagen URL.";
+    if (!producto.imagen1.trim()) {
+      nuevosErrores.imagen1 = "Informe imagen URL.";
+    }
+    if (!producto.imagen2.trim()) {
+      nuevosErrores.imagen2 = "Informe imagen URL.";
+    }
+    if (!producto.imagen3.trim()) {
+      nuevosErrores.imagen3 = "Informe imagen URL.";
+    }
+    if (!producto.imagen4.trim()) {
+      nuevosErrores.imagen4 = "Informe imagen URL.";
     }
     if (!producto.descripcion1.trim() || producto.descripcion1.length < 10) {
       nuevosErrores.descripcion1 =

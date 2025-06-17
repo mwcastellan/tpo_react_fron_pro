@@ -9,7 +9,10 @@ function ProductoAdmFormAdd() {
     nombre: "",
     precio: "0",
     disponible: "0",
-    imagen: "",
+    imagen1: "",
+    imagen2: "",
+    imagen3: "",
+    imagen4: "",
     cantidad: "0",
     descripcion1: "",
     descripcion2: "",
@@ -27,7 +30,10 @@ function ProductoAdmFormAdd() {
       nombre: "",
       precio: 0,
       disponible: 0,
-      imagen: "",
+      imagen1: "",
+      imagen2: "",
+      imagen3: "",
+      imagen4: "",
       cantidad: 0,
       descripcion1: "",
       descripcion2: "",
@@ -98,16 +104,57 @@ function ProductoAdmFormAdd() {
               <p style={{ color: "red" }}>{errores.disponible}</p>
             )}
 
-            <label className="form-label">Imagen:</label>
+            <label className="form-label">Imagen1:</label>
             <input
               className="form-control"
               type="text"
-              name="imagen"
-              value={producto.imagen}
+              name="imagen1"
+              value={producto.imagen1}
               onChange={handleChange}
               required
             />
-            {errores.imagen && <p style={{ color: "red" }}>{errores.imagen}</p>}
+            {errores.imagen1 && (
+              <p style={{ color: "red" }}>{errores.imagen1}</p>
+            )}
+
+            <label className="form-label">Imagen2:</label>
+            <input
+              className="form-control"
+              type="text"
+              name="imagen2"
+              value={producto.imagen2}
+              onChange={handleChange}
+              required
+            />
+            {errores.imagen2 && (
+              <p style={{ color: "red" }}>{errores.imagen2}</p>
+            )}
+
+            <label className="form-label">Imagen3:</label>
+            <input
+              className="form-control"
+              type="text"
+              name="imagen3"
+              value={producto.imagen3}
+              onChange={handleChange}
+              required
+            />
+            {errores.imagen3 && (
+              <p style={{ color: "red" }}>{errores.imagen3}</p>
+            )}
+
+            <label className="form-label">Imagen4:</label>
+            <input
+              className="form-control"
+              type="text"
+              name="imagen4"
+              value={producto.imagen4}
+              onChange={handleChange}
+              required
+            />
+            {errores.imagen4 && (
+              <p style={{ color: "red" }}>{errores.imagen4}</p>
+            )}
 
             <label className="form-label">Cantidad:</label>
             <input

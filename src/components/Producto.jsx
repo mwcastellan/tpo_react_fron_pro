@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 import imagenerr from "../assets/404-error-3060993_1280.webp";
@@ -33,20 +34,47 @@ const Producto = ({ producto }) => {
         <h6 className="card-title">Categoria: {producto.categoria}</h6>
         <h6 className="card-title">Precio: ${producto.precio}</h6>
         <h6 className="card-title">Disponible: {producto.disponible}</h6>
-        {producto.imagen ? (
-          <img
-            src={producto.imagen}
-            style={{
-              width: "50%",
-              maxHeight: "300px",
-              objectFit: "cover",
-              borderRadius: "8px",
-              marginBottom: "0.5rem",
-            }}
-            onError={(e) => {
-              e.target.src = imagenerr;
-            }}
-          />
+        {producto.imagen1 ? (
+          <div>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen1}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen2}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen3}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 imgProducto"
+                  src={producto.imagen4}
+                  onError={(e) => {
+                    e.target.src = imagenerr;
+                  }}
+                />
+              </Carousel.Item>
+            </Carousel>
+          </div>
         ) : (
           <img src={imagenerr} width="100%" height="100%" />
         )}
@@ -59,13 +87,9 @@ const Producto = ({ producto }) => {
             marginBottom: "2px",
           }}
         >
-          <BotonSigno  onClick={decrease}>
-            -
-          </BotonSigno>
+          <BotonSigno onClick={decrease}>-</BotonSigno>
           <h6>{cantidad}</h6>
-          <BotonSigno  onClick={increase}>
-            +
-          </BotonSigno>
+          <BotonSigno onClick={increase}>+</BotonSigno>
         </div>
         <div className="card-title row">
           <BotonGeneral

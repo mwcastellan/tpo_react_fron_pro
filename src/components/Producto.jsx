@@ -39,7 +39,7 @@ const Producto = ({ producto }) => {
             <Carousel>
               <Carousel.Item>
                 <img
-                  className="d-block w-100 imgProducto"
+                  className="d-block w-50 imgProducto"
                   src={producto.imagen1}
                   onError={(e) => {
                     e.target.src = imagenerr;
@@ -48,7 +48,7 @@ const Producto = ({ producto }) => {
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  className="d-block w-100 imgProducto"
+                  className="d-block w-50 imgProducto"
                   src={producto.imagen2}
                   onError={(e) => {
                     e.target.src = imagenerr;
@@ -57,7 +57,7 @@ const Producto = ({ producto }) => {
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  className="d-block w-100 imgProducto"
+                  className="d-block w-50 imgProducto"
                   src={producto.imagen3}
                   onError={(e) => {
                     e.target.src = imagenerr;
@@ -66,7 +66,7 @@ const Producto = ({ producto }) => {
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  className="d-block w-100 imgProducto"
+                  className="d-block w-50 imgProducto"
                   src={producto.imagen4}
                   onError={(e) => {
                     e.target.src = imagenerr;

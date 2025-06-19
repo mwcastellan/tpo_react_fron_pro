@@ -27,3 +27,12 @@ npm run dev
     "role": "client",
     "id": "2"
 },
+
+## Nota: Uso de @media
+INICIO
+@media screen
+
+Lista de Productos
+/* Lista de Productos */
+@media only screen and (max-width:
+.lstProducto 

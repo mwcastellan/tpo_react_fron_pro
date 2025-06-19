@@ -1,5 +1,5 @@
 import React from "react";
-import {Carousel} from "react-bootstrap"
+import { Carousel } from "react-bootstrap";
 import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
 import carrusel1 from "../assets/carrusel1.png";

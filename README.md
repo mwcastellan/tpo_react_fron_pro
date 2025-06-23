@@ -1,4 +1,5 @@
-## Curso React Frontend - Clase 25022 - TRABAJO PRACTICO
+## Curso React Frontend Final - Clase 25022 - TRABAJO PRACTICO
+## Marcelo Walter Castellan
 Site: Veterinaria - Curso React Frontend
 - Netifly: tpo-react-fron-pro - https://tpo-react-fron-pro.netlify.app
 - Vercel: tpo-react-fron-pro - https://tpo-react-fron-pro.vercel.app
@@ -9,7 +10,7 @@ Site: Veterinaria - Curso React Frontend
 
 1. Descarga Node.js desde su sitio oficial e instálalo.
 2. Abre una terminal y ejecuta el siguiente comando para crear un proyecto React:
-npm create vite@latest (Si crea Proyecto). Selecciona React como framework y configura el proyecto.
+npm create vite@latest (crear Proyecto). Selecciona React como framework y configura el proyecto.
 3. Ingresar al directorio e Instala las dependencias del proyecto
 npm install, en package.json están declaradas todas las dependencias.
 4. Inicia el servidor local para ver tu aplicación:

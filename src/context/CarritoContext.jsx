@@ -93,6 +93,14 @@ export const CarritoProvider = ({ children }) => {
         .filter((item) => item != null);
     });
   };
+  /* Confirmar al Carrito */
+  const confirmCarrito = () => {
+    /* Para futura version */
+    /* Validar stock productos */
+    /* Confirmar la Compra     */
+    /* etc, etc                */
+    toast.info(`Muchas gracias por su compra`);
+  };
 
   return (
     <CarritoContext.Provider
@@ -114,6 +122,7 @@ export const CarritoProvider = ({ children }) => {
         handleDeleteFromCarrito,
         isCarritoOpen,
         setCarritoOpen,
+        confirmCarrito,
       }}
     >
       {children}

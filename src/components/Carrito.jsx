@@ -7,8 +7,13 @@ import { BotonGeneral } from "./estaticos/Estilos";
 
 /* Carrito de Compras */
 const Carrito = () => {
-  const { carrito, isCarritoOpen, setCarritoOpen, handleDeleteFromCarrito } =
-    useContext(CarritoContext);
+  const {
+    carrito,
+    isCarritoOpen,
+    setCarritoOpen,
+    handleDeleteFromCarrito,
+    confirmCarrito,
+  } = useContext(CarritoContext);
 
   return (
     <div className={`cart-drawer ${isCarritoOpen ? "open" : ""}`}>
@@ -117,7 +122,10 @@ const Carrito = () => {
                 )}
               </p>
             </h6>
-            <BotonGeneral aria-label="Confirmar su compra">
+            <BotonGeneral
+              aria-label="Confirmar su compra"
+              onClick={() => confirmCarrito()}
+            >
               Confirmar
             </BotonGeneral>
           </section>
